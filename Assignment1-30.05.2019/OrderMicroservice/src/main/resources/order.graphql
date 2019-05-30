@@ -1,0 +1,14 @@
+schema  {
+    query: Query
+}
+
+type Query  {
+    allOrders: [Order!]!
+    order(orderId:String):  Order!
+}
+
+type Order    {
+    orderId: String
+    customerId: String
+    productId: String
+}

@@ -1,0 +1,18 @@
+schema  {
+    query: Query
+}
+
+type Query  {
+    allCustomers: [Customer!]!
+    allCustomers(age:Int):   [Customer!]!
+    customer(customerId:String):  Customer!
+    customer(lastName:String): Customer!
+    customer(firstName:String): Customer!
+}
+
+type Customer    {
+    customerId: String
+    firstName: String
+    lastName: String
+    age: Int
+}
