@@ -5,9 +5,9 @@ schema  {
 type Query  {
     allCustomers: [Customer!]!
     allCustomers(age:Int):   [Customer!]!
-    customer(customerId:String):  Customer!
     customer(lastName:String): Customer!
     customer(firstName:String): Customer!
+    customer(customerId:String):  Customer!
 }
 
 type Customer    {
