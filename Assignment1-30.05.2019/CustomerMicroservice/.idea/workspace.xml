@@ -2,31 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b89397d-c780-40a8-b932-6b732f279457" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/CustomerMicroService.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrderMicroservice/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrderMicroservice/src/main/java/microservice/order/Detail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrderMicroservice/src/main/java/microservice/order/responseCustomer/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrderMicroservice/src/main/java/microservice/order/responseCustomer/CustomerResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrderMicroservice/src/main/java/microservice/order/responseCustomer/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrderMicroservice/src/main/java/microservice/order/responseProduct/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrderMicroservice/src/main/java/microservice/order/responseProduct/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrderMicroservice/src/main/java/microservice/order/responseProduct/ProductResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/GraphQLwithSchema.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/Author.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/BookDataFetcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/GraphQLService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/MultipleBookDataFetcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/SpringBootMicroservice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/resources/schema.graphql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/customer.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/customer.graphql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../OrderMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OrderMicroservice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OrderMicroservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OrderMicroservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OrderMicroservice/src/main/java/microservice/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OrderMicroservice/src/main/java/microservice/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OrderMicroservice/src/main/java/microservice/order/OrderDataFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OrderMicroservice/src/main/java/microservice/order/OrderDataFetcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OrderMicroservice/src/main/resources/order.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/../OrderMicroservice/src/main/resources/order.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProductMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ProductMicroservice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProductMicroservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ProductMicroservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProductMicroservice/src/main/java/microservice/product/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProductMicroservice/src/main/java/microservice/product/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProductMicroservice/src/main/resources/product.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/../ProductMicroservice/src/main/resources/product.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProductMicroservice/target/classes/product.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/../ProductMicroservice/target/classes/product.graphql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,16 +32,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="65" column="12" selection-start-line="10" selection-start-column="4" selection-end-line="65" selection-end-column="12" />
+            <state relative-caret-position="163">
+              <caret line="47" column="19" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="47" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -60,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/customer.graphql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+            <state relative-caret-position="272">
+              <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -72,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/customer/SpringBootCustomerMicroService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-end-line="11" />
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#266#267#0" expanded="true" />
@@ -86,7 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/customer/CustomerDataFetcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="136">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,8 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/customer/GraphQLService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="55" selection-start-line="17" selection-end-line="55" />
+            <state relative-caret-position="530">
+              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1716#1717#0" expanded="true" />
@@ -120,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/customer/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+            <state relative-caret-position="530">
+              <caret line="46" selection-start-line="24" selection-start-column="4" selection-end-line="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,8 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/customer/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="272">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -204,13 +199,16 @@
     <option name="width" value="768" />
     <option name="height" value="728" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,7 +253,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,7 +308,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -367,38 +364,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="65" column="12" selection-start-line="10" selection-start-column="4" selection-end-line="65" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="21" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/customer/SpringBootCustomerMicroService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/customer/CustomerDataFetcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -412,35 +381,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/customer/GraphQLService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="55" selection-start-line="17" selection-end-line="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1716#1717#0" expanded="true" />
-            <element signature="e#1746#1747#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/customer/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/microservice/customer/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="272">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="47" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/customer/SpringBootCustomerMicroService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/customer.graphql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -454,10 +427,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/customer.graphql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/customer/CustomerDataFetcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/customer/GraphQLService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1746#1747#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/customer/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="46" selection-start-line="24" selection-start-column="4" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
