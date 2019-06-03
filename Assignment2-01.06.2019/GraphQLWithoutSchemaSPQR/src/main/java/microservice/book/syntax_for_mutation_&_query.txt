@@ -1,0 +1,31 @@
+mutation	{
+  createBook(id:"dfg45", title:"Harry Potter", isbn:"qml13", pageCount:1004, author:	{id:"xc451", firstName:"J.K.", lastName:"Rowlings"})
+}
+
+query	{
+  allBooks(pageCount:1004)	{
+    id
+    isbn
+    title
+    pageCount
+    author	{
+      id
+      firstName
+      lastName
+    }
+  }
+}
+
+mutation	{
+  updateBook(id:"dfg45", title:"Harry Potter", isbn:"qml13", pageCount:1004, author:	{id:"mn45", firstName:"J.K.", lastName:"Rowlings"})	{
+    id
+    title
+    isbn
+    pageCount
+    author	{
+      id
+      firstName
+      lastName
+    }
+  }
+}
