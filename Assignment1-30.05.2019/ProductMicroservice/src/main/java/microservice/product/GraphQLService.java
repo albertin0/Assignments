@@ -8,12 +8,18 @@ import graphql.schema.idl.SchemaParser;
 import graphql.schema.idl.TypeDefinitionRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
+import org.springframework.util.FileCopyUtils;
 
 import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 @Service
 public class GraphQLService {
@@ -36,10 +42,21 @@ public class GraphQLService {
     private void loadSchema() throws IOException    {
 
         //get the Schema
-        File schemaFile = resource.getFile();
+        //File schemaFile = resource.getFile();
+
+        //String schemaFileText = new String(Files.readAllBytes(Paths.get(resource.getFile().getPath())));
+
+        String schemaFileText = "";
+        ClassPathResource resource = new ClassPathResource("/product.graphql");
+        try {
+            byte[] dataArr = FileCopyUtils.copyToByteArray(resource.getInputStream());
+            schemaFileText = new String(dataArr, StandardCharsets.UTF_8);
+        } catch (IOException e) {
+            // do whatever
+        }
 
         //parse the Schema
-        TypeDefinitionRegistry typeDefinitionRegistry = new SchemaParser().parse(schemaFile);
+        TypeDefinitionRegistry typeDefinitionRegistry = new SchemaParser().parse(schemaFileText);
         RuntimeWiring wiring = RuntimeWiring.newRuntimeWiring()
                                 .type("Query", typeWiring -> typeWiring
                                 .dataFetcher("allProducts", multipleProductDataFetcher)
