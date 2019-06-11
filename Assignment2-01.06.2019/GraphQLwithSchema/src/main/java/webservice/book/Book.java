@@ -3,6 +3,7 @@ package webservice.book;
 import com.sun.xml.internal.bind.v2.model.core.ID;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @ToString
@@ -13,6 +14,7 @@ public class Book {
     private String title;
     private String isbn;
     private Integer pageCount;
+    @DBRef
     private Author author;
 
     public Book() {

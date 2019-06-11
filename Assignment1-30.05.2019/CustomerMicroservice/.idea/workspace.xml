@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="927467d3-ef1f-4648-97c2-26a1ba86b48f" name="Default Changelist" comment="" />
+    <list default="true" id="927467d3-ef1f-4648-97c2-26a1ba86b48f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/AuthorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OrderMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OrderMicroservice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ProductMicroservice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/META-INF/GraphQLwithSchema.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/Author.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/GraphQLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/GraphQLService.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/customer.graphql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" column="12" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="12" />
+              <caret line="16" column="12" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -240,7 +256,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -255,7 +271,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -345,7 +361,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/customer.graphql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="12" />
+          <caret line="16" column="12" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="12" />
         </state>
       </provider>
     </entry>

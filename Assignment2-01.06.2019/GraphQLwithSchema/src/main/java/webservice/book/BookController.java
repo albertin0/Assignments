@@ -17,9 +17,13 @@ public class BookController {
     @Autowired
     BookRepository bookRepository;
 
+    @Autowired
+    AuthorRepository  authorRepository;
+
     @PostMapping(value = "/webservice/create")
     public ResponseEntity<String> createBook(@RequestBody Book book)    {
         bookRepository.save(book);
+        authorRepository.save(book.getAuthor());
         return new ResponseEntity<String>(book.toString() + " added to db.", HttpStatus.OK);
     }
 

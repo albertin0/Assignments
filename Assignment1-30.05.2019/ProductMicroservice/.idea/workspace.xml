@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cff8bd8e-8352-4da1-8d29-8561a9ddebe7" name="Default Changelist" comment="" />
+    <list default="true" id="cff8bd8e-8352-4da1-8d29-8561a9ddebe7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/AuthorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CustomerMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomerMicroservice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OrderMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OrderMicroservice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/META-INF/GraphQLwithSchema.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/Author.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/GraphQLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/GraphQLService.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

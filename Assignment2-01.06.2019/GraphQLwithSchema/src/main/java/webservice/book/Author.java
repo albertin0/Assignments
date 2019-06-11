@@ -3,8 +3,10 @@ package webservice.book;
 import com.sun.xml.internal.bind.v2.model.core.ID;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @ToString
+@Document(collection = "author")
 public class Author {
     @Id
     private String id;

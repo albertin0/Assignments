@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b397bf3-2b13-451f-a0ba-58f90280c489" name="Default Changelist" comment="" />
+    <list default="true" id="7b397bf3-2b13-451f-a0ba-58f90280c489" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/AuthorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CustomerMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomerMicroservice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ProductMicroservice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/java/webservice/book/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/META-INF/GraphQLwithSchema.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/Author.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/GraphQLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/target/classes/webservice/book/GraphQLService.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="67" lean-forward="true" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
+            <state relative-caret-position="68">
+              <caret line="4" column="40" lean-forward="true" selection-start-line="2" selection-end-line="4" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -143,6 +159,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/pom.xml" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -252,8 +269,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="67" lean-forward="true" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
+        <state relative-caret-position="68">
+          <caret line="4" column="40" lean-forward="true" selection-start-line="2" selection-end-line="4" selection-end-column="40" />
         </state>
       </provider>
     </entry>
