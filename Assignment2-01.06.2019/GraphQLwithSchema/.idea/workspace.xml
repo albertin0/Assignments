@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fa328cd-aae7-436a-8eb9-44b96e1c6761" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/webservice/book/AuthorRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment1-30.05.2019/CustomerMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment1-30.05.2019/CustomerMicroservice/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment1-30.05.2019/OrderMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment1-30.05.2019/OrderMicroservice/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment1-30.05.2019/ProductMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment1-30.05.2019/ProductMicroservice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/webservice/book/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webservice/book/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/webservice/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webservice/book/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/webservice/book/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webservice/book/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/GraphQLwithSchema.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webservice/book/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webservice/book/Author.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webservice/book/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webservice/book/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/webservice/book/GraphQLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/webservice/book/GraphQLService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,8 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -67,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/schema.graphql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
+            <state relative-caret-position="255">
               <caret line="15" column="18" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="15" selection-end-column="18" />
             </state>
           </provider>
@@ -100,23 +87,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/webservice/book/AuthorRepository.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="74" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
+            <state relative-caret-position="721">
+              <caret line="58" column="21" selection-start-line="54" selection-start-column="8" selection-end-line="58" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/webservice/book/GraphQLService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/webservice/book/AuthorRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="74" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -321,14 +305,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32843137" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32733223" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32733223" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869282" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="GraphQL" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32733223" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32569557" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32843137" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -372,13 +356,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="21" selection-start-line="54" selection-start-column="8" selection-end-line="58" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -470,8 +447,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/schema.graphql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
+        <state relative-caret-position="255">
           <caret line="15" column="18" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="58" column="21" selection-start-line="54" selection-start-column="8" selection-end-line="58" selection-end-column="21" />
         </state>
       </provider>
     </entry>
