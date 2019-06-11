@@ -10,8 +10,10 @@
 
     <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter</artifactId>
-        <version>2.0.8.RELEASE</version>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.5.RELEASE</version>
+        <relativePath/>
+        <!-- lookup parent from repository -->
     </parent>
 
     <properties>
@@ -20,19 +22,7 @@
         <java.version>1.8</java.version>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>bintray-americanexpress-maven</id>
-            <url>https://dl.bintray.com/americanexpress/maven</url>
-        </repository>
-    </repositories>
-
     <dependencies>
-        <dependency>
-            <groupId>io.aexp.nodes.graphql</groupId>
-            <artifactId>nodes</artifactId>
-            <version>0.4.0</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
@@ -61,11 +51,6 @@
             <artifactId>httpclient</artifactId>
             <version>4.5.8</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot</artifactId>
-            <version>2.0.8.RELEASE</version>
-        </dependency>
 
     </dependencies>
 
@@ -82,6 +67,24 @@
                 <configuration>
                     <source>8</source>
                     <target>8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <!--<version>1.2.0</version>-->
+                <configuration>
+                    <imageName>ordermicroservice</imageName>
+                    <baseImage>java:8</baseImage>
+                    <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+                    <!-- copy the service's jar file from target into the root directory of the image -->
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
                 </configuration>
             </plugin>
         </plugins>

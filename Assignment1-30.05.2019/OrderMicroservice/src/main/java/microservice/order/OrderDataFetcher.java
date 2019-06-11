@@ -14,6 +14,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 
@@ -23,6 +24,11 @@ public class OrderDataFetcher implements DataFetcher<Detail> {
     @Autowired
     OrderRepository orderRepository;
 
+    @Value("${product.api.end.point}")
+    String productApiEndPoint;
+
+    @Value("${customer.api.end.point}")
+    String customerApiEndPoint;
 
     public Detail get(DataFetchingEnvironment dataFetchingEnvironment) {
         Order order = orderRepository.findByOrderId(dataFetchingEnvironment.getArgument("orderId"));
@@ -33,7 +39,6 @@ public class OrderDataFetcher implements DataFetcher<Detail> {
 
     public Product getProductFromResponse(String productId) {
         String productRequestBody = "{product(productId:\""+productId+"\"){productId productName productCost productModel}}";
-        String productApiEndPoint = "http://localhost:8001/webservice1/retrieve";
         HttpClient httpClient = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost(productApiEndPoint);
         httpPost.setHeader("Content-type", "application/json");
@@ -54,7 +59,6 @@ public class OrderDataFetcher implements DataFetcher<Detail> {
 
     public Customer getCustomerFromResponse(String customerId) {
         String customerRequestBody = "{customer(customerId:\""+customerId+"\"){customerId firstName lastName age}}";
-        String customerApiEndPoint = "http://localhost:8002/webservice2/retrieve";
         HttpClient httpClient = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost(customerApiEndPoint);
         httpPost.setHeader("Content-type", "application/json");
