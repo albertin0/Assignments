@@ -1,0 +1,16 @@
+mutation	{
+  createUser(id:"asd4",firstName:"Andre",lastName:"Paul",age:36)
+}
+
+query	{
+  allUsers	{
+    id
+    firstName
+    lastName
+    age
+  }
+}
+
+mutation	{
+  updateUser(id:"qwe1",firstName:"James",lastName:"Halliday",age:41)
+}
