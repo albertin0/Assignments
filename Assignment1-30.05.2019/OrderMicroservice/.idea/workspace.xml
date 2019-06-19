@@ -2,32 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b397bf3-2b13-451f-a0ba-58f90280c489" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/POC_using_SPQR.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/src/main/java/microservice/POC/SPQR/GraphQLService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/src/main/java/microservice/POC/SPQR/SpringBootMicroService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/src/main/java/microservice/POC/SPQR/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/src/main/java/microservice/POC/SPQR/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/src/main/java/microservice/POC/SPQR/query&amp;mutationSyntax.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CustomerMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomerMicroservice/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProductMicroservice/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ProductMicroservice/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProductMicroservice/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ProductMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ProductMicroservice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLWithoutSchemaSPQR/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLWithoutSchemaSPQR/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLWithoutSchemaSPQR/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLWithoutSchemaSPQR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLWithoutSchemaSPQR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLWithoutSchemaSPQR/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLWithoutSchemaSPQR/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLWithoutSchemaSPQR/target/classes/META-INF/GraphQLWithoutSchemaSPQR.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLWithoutSchemaSPQR/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLWithoutSchemaSPQR/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/GraphQLwithSchema/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/src/main/java/microservice/POC/SPQR/GraphQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/src/main/java/microservice/POC/SPQR/GraphQLService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/src/main/java/microservice/POC/SPQR/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/src/main/java/microservice/POC/SPQR/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/target/POC_using_SPQR-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/target/POC_using_SPQR-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/target/POC_using_SPQR-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/target/POC_using_SPQR-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/target/classes/microservice/POC/SPQR/GraphQLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/target/classes/microservice/POC/SPQR/GraphQLService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/target/classes/microservice/POC/SPQR/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/target/classes/microservice/POC/SPQR/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/target/docker/POC_using_SPQR-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/target/docker/POC_using_SPQR-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/target/test-classes/image_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment2-01.06.2019/POC_using_SPQR/target/test-classes/image_info.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -91,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/order/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-151">
+            <state relative-caret-position="85">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
@@ -119,7 +106,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="768" />
     <option name="height" value="728" />
   </component>
@@ -129,8 +116,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -175,6 +160,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -230,7 +217,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -289,7 +276,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/microservice/order/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-151">
+        <state relative-caret-position="85">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>

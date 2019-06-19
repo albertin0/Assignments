@@ -2,32 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fa328cd-aae7-436a-8eb9-44b96e1c6761" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/POC_using_SPQR.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/GraphQLService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/SpringBootMicroService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/query&amp;mutationSyntax.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment1-30.05.2019/CustomerMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment1-30.05.2019/CustomerMicroservice/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment1-30.05.2019/OrderMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment1-30.05.2019/OrderMicroservice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment1-30.05.2019/ProductMicroservice/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment1-30.05.2019/ProductMicroservice/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment1-30.05.2019/ProductMicroservice/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment1-30.05.2019/ProductMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment1-30.05.2019/ProductMicroservice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/target/classes/META-INF/GraphQLWithoutSchemaSPQR.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/GraphQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/GraphQLService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/target/POC_using_SPQR-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/target/POC_using_SPQR-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/target/POC_using_SPQR-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/target/POC_using_SPQR-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/target/classes/microservice/POC/SPQR/GraphQLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/target/classes/microservice/POC/SPQR/GraphQLService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/target/classes/microservice/POC/SPQR/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/target/classes/microservice/POC/SPQR/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/target/docker/POC_using_SPQR-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/target/docker/POC_using_SPQR-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/target/test-classes/image_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/target/test-classes/image_info.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/webservice/book/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="204">
               <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -66,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/webservice/book/Author.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="119">
               <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -87,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/webservice/book/BookRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="68">
               <caret line="7" column="67" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -111,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="34" column="17" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="34" selection-end-column="17" />
+            <state relative-caret-position="578">
+              <caret line="34" column="17" selection-start-line="22" selection-start-column="4" selection-end-line="34" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -215,6 +202,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,8 +248,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,7 +304,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -333,7 +320,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="GraphQL" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32569557" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32569557" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32843137" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -390,10 +377,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/webservice/book/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/webservice/book/Author.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/schema.graphql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="18" selection-start-line="11" selection-start-column="4" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/webservice/book/BookRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="67" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -404,6 +421,20 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="17" selection-start-line="22" selection-start-column="4" selection-end-line="34" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/webservice/book/AuthorRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="74" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -424,50 +455,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/webservice/book/Author.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/webservice/book/BookRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="67" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/webservice/book/AuthorRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="74" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/webservice/book/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="34" column="17" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="34" selection-end-column="17" />
         </state>
       </provider>
     </entry>

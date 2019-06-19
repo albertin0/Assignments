@@ -14,3 +14,31 @@ query	{
 mutation	{
   updateUser(id:"qwe1",firstName:"James",lastName:"Halliday",age:41)
 }
+
+query	{
+  allUsers	{
+    id firstName lastName age
+  }
+  allProducts	{
+    productId
+    productName
+    productModel
+    productCost
+  }
+}
+
+mutation	{
+  createProduct(productId:"zxc5",productName:"Honda Shine",productModel:"JWS 200",productCost:95000)
+}
+
+query	{
+  allUsers	{
+    id firstName lastName age
+  }
+  allProducts(productModel:"LKM 200")	{
+    productId
+    productName
+    productModel
+    productCost
+  }
+}
