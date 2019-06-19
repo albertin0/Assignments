@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="057ca3c1-1c4f-48dd-a388-f52c4e90adcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment1-30.05.2019/OrderMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment1-30.05.2019/OrderMicroservice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment1-30.05.2019/ProductMicroservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment1-30.05.2019/ProductMicroservice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GraphQLwithSchema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLwithSchema/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/query&amp;mutationSyntax.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/query&amp;mutationSyntax.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/POC_using_SPQR-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/POC_using_SPQR-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/POC_using_SPQR-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/POC_using_SPQR-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/GraphQLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/GraphQLService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/docker/POC_using_SPQR-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/docker/POC_using_SPQR-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/image_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/image_info.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -59,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/query&amp;mutationSyntax.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
-              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+              <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -80,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="328">
-              <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+              <caret line="125" selection-start-line="125" selection-end-line="125" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -193,7 +178,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="768" />
     <option name="height" value="728" />
   </component>
@@ -297,10 +282,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -314,7 +298,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" />
@@ -403,7 +387,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -438,7 +422,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/query&amp;mutationSyntax.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
         </state>
       </provider>
     </entry>

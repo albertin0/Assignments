@@ -42,3 +42,12 @@ query	{
     productCost
   }
 }
+
+query   {
+  allProducts(productName: "Honda Shine") {
+    productId
+    productName
+    productModel
+    productCost
+  }
+}
