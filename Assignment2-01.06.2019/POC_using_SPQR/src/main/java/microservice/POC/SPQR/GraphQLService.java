@@ -31,7 +31,11 @@ public class GraphQLService {
 
     @GraphQLQuery(name = "user")
     public User findById(String id)   {
-        return userRepository.findById(id).get();
+        Optional<User> result = userRepository.findById(id);
+        if(!result.isPresent()) {
+            return null;
+        }
+        return result.get();
     }
 
     @GraphQLQuery(name = "allUsers")
@@ -60,7 +64,11 @@ public class GraphQLService {
 
     @GraphQLMutation(name = "deleteUser")
     public String deleteUser(String id)    {
-        User user = userRepository.findById(id).get();
+        Optional<User> result = userRepository.findById(id);
+        if(!result.isPresent()) {
+            return "No user with id = " + id + " present in db.";
+        }
+        User user = result.get();
         userRepository.delete(user);
         return user.toString() + " deleted from repository.";
     }
@@ -73,7 +81,11 @@ public class GraphQLService {
 
     @GraphQLQuery(name = "product")
     public Product findByProductId(String productId)   {
-        return productRepository.findById(productId).get();
+        Optional<Product> result = productRepository.findById(productId);
+        if(!result.isPresent()) {
+            return null;
+        }
+        return result.get();
     }
 
     @GraphQLQuery(name = "allProducts")
@@ -110,9 +122,12 @@ public class GraphQLService {
         return product.toString() + " updated to db.";
     }
 
-    @GraphQLMutation(name = "deleteUser")
+    @GraphQLMutation(name = "deleteProduct")
     public String deleteProduct(String productId)    {
-        Product product = findByProductId(productId);
+        Optional<Product> result = productRepository.findById(productId);
+        if(!result.isPresent())
+            return "No Product with id = " + productId + " in db.";
+        Product product = result.get();
         productRepository.delete(product);
         return product.toString() + " deleted from repository.";
     }
