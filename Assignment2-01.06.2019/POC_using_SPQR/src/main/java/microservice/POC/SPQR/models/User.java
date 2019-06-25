@@ -5,6 +5,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Document(collection = "user")
@@ -18,7 +19,7 @@ public class User {
     private String userName;
     private String password;
     private Integer age;
-    private List<String> token;
+    private HashMap<String,String> token;
     private List<String> role;
 
     public User() {
@@ -45,7 +46,7 @@ public class User {
         this.addRole(r);
     }
 
-    public User(String id, String firstName, String lastName, String userName, String password, Integer age, List<String> token, List<String> role) {
+    public User(String id, String firstName, String lastName, String userName, String password, Integer age, HashMap<String,String> token, List<String> role) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -56,9 +57,9 @@ public class User {
         this.role = role;
     }
 
-    public void addToken(String t)  {
-        if(this.token==null)    this.token = new ArrayList<>();
-        token.add(t);
+    public void addToken(String id, String tok)  {
+        if(this.token==null)    this.token = new HashMap<>();
+        token.put(id,tok);
     }
 
     public void addRole(String r) {
@@ -82,11 +83,11 @@ public class User {
         this.password = password;
     }
 
-    public List<String> getToken() {
+    public HashMap<String,String> getToken() {
         return token;
     }
 
-    public void setToken(List<String> token) {
+    public void setToken(HashMap<String,String> token) {
         this.token = token;
     }
 

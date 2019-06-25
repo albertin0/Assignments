@@ -23,6 +23,7 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -47,24 +48,29 @@ public class GraphQLService {
     @Autowired
     JwtTokenUtil jwtTokenUtil;
 
-    @Autowired
-    LoggedInUserBean loggedInUserBean;
+//    @Autowired
+//    LoggedInUserBean loggedInUserBean;
 
     @GraphQLQuery(name = "greeting")
     @PreAuthorize("hasRole('ADMIN')")
     public String getGreeting(String name, @GraphQLEnvironment ResolutionEnvironment env) throws UserNotLoggedInException, NotFoundException {
-//        DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
-//        HttpServletRequest request = dgc.getServletRequest();
+        DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
+        HttpServletRequest request = dgc.getServletRequest();
 //        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
 //            return "Hello " + name + "!";
 //        }
 //        throw new UserNotLoggedInException();
-        if(loggedInUserBean.getLoggedInUser()!=null && loggedInUserBean.getLoggedInUser().getToken()!=null
-        && loggedInUserBean.getLoggedInUser().getToken().size()>0) {
-            String token = loggedInUserBean.getLoggedInUser().getToken().get(0);
-            if (jwtTokenUtil.isTokenValid(token)) {
-                return "Hello " + name + "!";
-            }
+//        if(loggedInUserBean.getLoggedInUser()!=null && loggedInUserBean.getLoggedInUser().getToken()!=null
+//        && loggedInUserBean.getLoggedInUser().getToken().size()>0) {
+//            String token = loggedInUserBean.getLoggedInUser().getToken().get(0);
+//            if (jwtTokenUtil.isTokenValid(token)) {
+//                return "Hello " + name + "!";
+//            }
+//        }
+//        throw new UserNotLoggedInException();
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if(jwtTokenUtil.isTokenValid(token))    {
+            return "Hello " + name + "!";
         }
         throw new UserNotLoggedInException();
     }
@@ -317,25 +323,29 @@ public class GraphQLService {
         User user = userRepository.findByUserName(authData.getUserName());
         if (user != null) {
             if (passwordEncoder.matches(authData.getPassword(), user.getPassword())) {
-                @SuppressWarnings("unchecked")
-                List<String> messages;
-                messages = (List<String>) request.getSession().getAttribute("MY_SESSION_MESSAGES");
+//                @SuppressWarnings("unchecked")
+                HashMap<String,String> idTokenMap = user.getToken();
+                if(idTokenMap==null)    idTokenMap = new HashMap<>();
+//                List<String> messages;
+//                messages = (List<String>) request.getSession().getAttribute("MY_SESSION_MESSAGES");
 //                if(messages!=null)  logger.info("messages: " + messages.toString());
-                if (messages == null || messages.size()==0) {
-                    if(messages==null)
-                        messages = new ArrayList<>();
+//                if (messages == null || messages.size()==0) {
+//                    if(messages==null)
+//                        messages = new ArrayList<>();
                     //request.getSession().setAttribute("MY_SESSION_MESSAGES", messages);
-                    String token = jwtTokenUtil.generateToken(user.getUserName());
-                    messages.add(token);
-                    request.getSession().setAttribute("MY_SESSION_MESSAGES", messages);
+                    String token = jwtTokenUtil.generateToken(user.getUserName(),request);
+                    idTokenMap.put(request.getSession().getId(),token);
+//                    request.getSession().setAttribute("MY_SESSION_MESSAGES", messages);
+                    request.getSession().setAttribute("MY_SESSION_TOKEN", token);
+                    request.getSession().setAttribute("MY_SESSION_USERNAME",user.getUserName());
                     logger.info("User logged in with userName..." + authData.getUserName() + " and token " + token);
-                    user.setToken(messages);
+                    user.setToken(idTokenMap);
                     userRepository.save(user);
-                    loggedInUserBean.setLoggedInUser(user);
+//                    loggedInUserBean.setLoggedInUser(user);
                     return user;
-                } else {
-                    return user;
-                }
+//                } else {
+//                    return user;
+//                }
             } else {
                 logger.info("invalid credentials to login..." + authData.getUserName());
                 throw new InvalidCredentialsException();
@@ -351,10 +361,12 @@ public class GraphQLService {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
 //        jwtTokenUtil.invalidateToken(request.getHeader("Authorization"));
-        logger.info("User logged out with userName..." + loggedInUserBean.getLoggedInUser().getUserName() + " and token " + loggedInUserBean.getLoggedInUser().getToken().toString());
-        jwtTokenUtil.invalidateToken(loggedInUserBean.getLoggedInUser().getToken().get(0));
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        String userName = (String)request.getSession().getAttribute("MY_SESSION_USERNAME");
+        logger.info("User logged out with userName..." + userName + " and token " + token);
+        jwtTokenUtil.invalidateToken(token);
         request.getSession().invalidate();
-        loggedInUserBean.setLoggedInUser(null);
+//        loggedInUserBean.setLoggedInUser(null);
         return true;
     }
 }

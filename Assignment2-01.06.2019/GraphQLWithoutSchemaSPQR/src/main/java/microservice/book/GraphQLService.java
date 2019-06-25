@@ -6,6 +6,7 @@ import io.leangen.graphql.spqr.spring.annotations.GraphQLApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
 
 @Service
@@ -40,16 +41,21 @@ public class GraphQLService {
         return bookRepository.findById(id).get();
     }
 
+    @GraphQLQuery(name = "book")
+    public String findByIdValMap(String idOfMap) {
+        return bookRepository.findByIdValMap(idOfMap);
+    }
+
     @GraphQLMutation(name = "createBook")
-    public String createBook(String id, String title, String isbn, Integer pageCount, Author author)    {
-        Book book = new Book(id,title,isbn,pageCount,author);
+    public String createBook(String id, String title, String isbn, Integer pageCount, Author author, HashMap<String, String> idValMap)    {
+        Book book = new Book(id,title,isbn,pageCount,author,idValMap);
         bookRepository.save(book);
         return book.toString() + " saved to Repository.";
     }
 
     @GraphQLMutation(name = "updateBook")
-    public Book updateBook(String id, String title, String isbn, Integer pageCount, Author author) {
-        Book book = new Book(id, title, isbn, pageCount, author);
+    public Book updateBook(String id, String title, String isbn, Integer pageCount, Author author, HashMap<String, String> idValMap) {
+        Book book = new Book(id, title, isbn, pageCount, author, idValMap);
         return bookRepository.save(book);
     }
 

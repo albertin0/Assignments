@@ -2,36 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="057ca3c1-1c4f-48dd-a388-f52c4e90adcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/LoggedInUserBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/exceptions/InvalidCredentialsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/exceptions/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/exceptions/UserAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/exceptions/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/exceptions/UserNotLoggedInException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/AuthenticationData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/src/main/java/microservice/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/src/main/java/microservice/book/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/src/main/java/microservice/book/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/src/main/java/microservice/book/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/src/main/java/microservice/book/GraphQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/src/main/java/microservice/book/GraphQLService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/target/classes/microservice/book/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/target/classes/microservice/book/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/target/classes/microservice/book/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/target/classes/microservice/book/BookRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/target/classes/microservice/book/GraphQLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GraphQLWithoutSchemaSPQR/target/classes/microservice/book/GraphQLService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/SpringBootMicroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/SpringBootMicroService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/GraphQLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/GraphQLService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/ProductRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/SpringBootMicroService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/SpringBootMicroService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,31 +46,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="330" column="61" selection-start-line="330" selection-start-column="61" selection-end-line="330" selection-end-column="61" />
+            <state relative-caret-position="280">
+              <caret line="344" selection-start-line="344" selection-end-line="344" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#15778#15808#1" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/LoggedInUserBean.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/UserRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="238">
+              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
               <folding>
-                <element signature="e#225#226#0" expanded="true" />
-                <element signature="e#273#274#0" expanded="true" />
-                <element signature="e#310#311#0" expanded="true" />
-                <element signature="e#345#346#0" expanded="true" />
-                <element signature="e#399#400#0" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/ProductRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state relative-caret-position="106">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,14 +109,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="97" column="24" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
+            <state relative-caret-position="106">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1225#1226#0" expanded="true" />
                 <element signature="e#1292#1293#0" expanded="true" />
               </folding>
             </state>
@@ -136,10 +125,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtUserDetailsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="124">
               <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="688">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2249#2250#0" expanded="true" />
+                <element signature="e#2277#2278#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -207,9 +210,7 @@
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/exceptions/UserAlreadyExistsException.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/exceptions/UserNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/exceptions/UserNotLoggedInException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/AuthenticationData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/Role.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtUserDetailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/SecurityConfiguration.java" />
@@ -219,10 +220,12 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/SpringBootMicroService.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/LoggedInUserBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/JwtFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java" />
       </list>
     </option>
   </component>
@@ -372,7 +375,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -383,14 +385,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -402,96 +404,132 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>318</line>
+          <line>324</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>336</line>
+          <line>346</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>327</line>
+          <line>335</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>328</line>
+          <line>336</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>324</line>
+          <line>332</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
-          <line>44</line>
+          <line>49</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
-          <line>37</line>
+          <line>42</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java</url>
-          <line>98</line>
+          <line>100</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java</url>
-          <line>85</line>
+          <line>87</line>
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java</url>
-          <line>76</line>
+          <line>78</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java</url>
-          <line>57</line>
+          <line>58</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java</url>
-          <line>52</line>
+          <line>53</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java</url>
-          <line>48</line>
+          <line>49</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java</url>
-          <line>43</line>
+          <line>44</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java</url>
-          <line>39</line>
+          <line>40</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
@@ -551,13 +589,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
-          <line>52</line>
+          <line>57</line>
           <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
-          <line>45</line>
+          <line>50</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -565,115 +603,115 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
-          <line>59</line>
+          <line>75</line>
           <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
-          <line>63</line>
+          <line>79</line>
           <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
-          <line>61</line>
+          <line>77</line>
           <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>61</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>314</line>
+          <line>320</line>
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>316</line>
+          <line>322</line>
           <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
-          <line>51</line>
+          <line>56</line>
           <properties />
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
-          <line>57</line>
+          <line>73</line>
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
-          <line>53</line>
+          <line>58</line>
           <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
-          <line>50</line>
+          <line>55</line>
           <properties />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
-          <line>46</line>
+          <line>51</line>
           <properties />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>331</line>
+          <line>341</line>
           <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>333</line>
+          <line>343</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java</url>
-          <line>61</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java</url>
-          <line>62</line>
+          <line>63</line>
           <properties />
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java</url>
-          <line>69</line>
+          <line>71</line>
           <properties />
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java</url>
-          <line>81</line>
+          <line>83</line>
           <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java</url>
-          <line>70</line>
+          <line>72</line>
           <properties />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>334</line>
+          <line>344</line>
           <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
@@ -689,11 +727,63 @@
           <properties />
           <option name="timeStamp" value="57" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
+          <line>326</line>
+          <properties />
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>user.getToken()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getSession().getId()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>this.jwtTokenUtil = jwtTokenUtil</expression-string>
         <language-id>JAVA</language-id>
@@ -726,16 +816,6 @@
       </expression>
       <expression>
         <expression-string>jwtTokenUtil.generateToken(user.getUserName())</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>userRepository.findByUserName(authData.getUserName())</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>loggedInUserBean.getLoggedInUser()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -811,26 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/ProductRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/leangen/graphql/graphql-spqr-spring-boot-autoconfigure/0.0.4/graphql-spqr-spring-boot-autoconfigure-0.0.4.jar!/io/leangen/graphql/spqr/spring/autoconfigure/DefaultGlobalContext.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
@@ -900,18 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
           <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2249#2250#0" expanded="true" />
-            <element signature="e#2277#2278#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -986,6 +1034,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/misc/Unsafe.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="353" column="23" selection-start-line="353" selection-start-column="23" selection-end-line="353" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2249#2250#0" expanded="true" />
+            <element signature="e#2277#2278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/ProductRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/SecurityConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -996,20 +1083,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtUserDetailsService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="280">
+          <caret line="344" selection-start-line="344" selection-end-line="344" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/misc/Unsafe.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="353" column="23" selection-start-line="353" selection-start-column="23" selection-end-line="353" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1026,35 +1106,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtUserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="97" column="24" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
+        <state relative-caret-position="124">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1225#1226#0" expanded="true" />
-            <element signature="e#1292#1293#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="106">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="330" column="61" selection-start-line="330" selection-start-column="61" selection-end-line="330" selection-end-column="61" />
+        <state relative-caret-position="106">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#15778#15808#1" expanded="true" />
+            <element signature="e#1292#1293#0" expanded="true" />
           </folding>
         </state>
       </provider>

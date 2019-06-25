@@ -4,6 +4,8 @@ import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.HashMap;
+
 @Document(collection = "book2")
 @ToString
 public class Book {
@@ -14,16 +16,18 @@ public class Book {
     private String isbn;
     private Integer pageCount;
     private Author author;
+    private HashMap<String,String> idValMap;
 
     public Book() {
     }
 
-    public Book(String id, String title, String isbn, Integer pageCount, Author author) {
+    public Book(String id, String title, String isbn, Integer pageCount, Author author, HashMap<String,String> idValMap) {
         this.id = id;
         this.title = title;
         this.isbn = isbn;
         this.pageCount = pageCount;
         this.author = author;
+        this.idValMap = idValMap;
     }
 
     public String getId() {
@@ -64,5 +68,13 @@ public class Book {
 
     public void setAuthor(Author author) {
         this.author = author;
+    }
+
+    public HashMap<String, String> getIdValMap() {
+        return idValMap;
+    }
+
+    public void setIdValMap(HashMap<String, String> idValMap) {
+        this.idValMap = idValMap;
     }
 }

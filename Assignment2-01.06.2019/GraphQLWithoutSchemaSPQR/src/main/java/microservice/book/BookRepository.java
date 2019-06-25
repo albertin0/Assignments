@@ -11,4 +11,5 @@ public interface BookRepository extends MongoRepository<Book, String> {
     public Book findByTitle(String title);
     public Book findByIsbn(String isbn);
     public List<Book> findByPageCount(Integer pageCount);
+    public String findByIdValMap(String id);
 }
