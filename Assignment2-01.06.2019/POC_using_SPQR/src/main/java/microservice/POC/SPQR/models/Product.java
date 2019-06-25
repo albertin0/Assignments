@@ -1,4 +1,4 @@
-package microservice.POC.SPQR;
+package microservice.POC.SPQR.models;
 
 import lombok.ToString;
 import org.springframework.data.annotation.Id;

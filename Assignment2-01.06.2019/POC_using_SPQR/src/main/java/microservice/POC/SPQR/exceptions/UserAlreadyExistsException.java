@@ -1,4 +1,10 @@
 package microservice.POC.SPQR.exceptions;
 
-public class UserAlreadyExistsException {
+public class UserAlreadyExistsException extends RuntimeException{
+
+    private static final long serialVersionUID = 1L;
+
+    public UserAlreadyExistsException(String message) {
+        super(message);
+    }
 }

@@ -1,4 +1,4 @@
-package microservice.POC.SPQR;
+package microservice.POC.SPQR.jwt;
 
 import microservice.POC.SPQR.GraphQLService;
 import microservice.POC.SPQR.LoggedInUserBean;

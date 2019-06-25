@@ -1,4 +1,4 @@
-package microservice.POC.SPQR;
+package microservice.POC.SPQR.repository;
 
 import microservice.POC.SPQR.models.Product;
 import org.springframework.data.mongodb.repository.MongoRepository;
