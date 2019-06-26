@@ -80,7 +80,9 @@ public class GraphQLService {
     public List<User> findAllUsers(@GraphQLEnvironment ResolutionEnvironment env)   throws UserNotLoggedInException, NotFoundException {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+//        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        if (jwtTokenUtil.isTokenValid(token)) {
             return userRepository.findAll();
         }
         throw new UserNotLoggedInException();
@@ -91,7 +93,8 @@ public class GraphQLService {
     public List<User> findAllUsers(Integer age, @GraphQLEnvironment ResolutionEnvironment env)  throws UserNotLoggedInException, NotFoundException {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             return userRepository.findByAge(age);
         }
         throw new UserNotLoggedInException();
@@ -102,7 +105,8 @@ public class GraphQLService {
     public User findById(String id, @GraphQLEnvironment ResolutionEnvironment env)  throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             Optional<User> result = userRepository.findById(id);
             if(!result.isPresent()) {
                 return null;
@@ -117,7 +121,8 @@ public class GraphQLService {
     public List<User> findByFirstName(String firstName, @GraphQLEnvironment ResolutionEnvironment env)   throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             return userRepository.findByFirstName(firstName);
         }
         throw new UserNotLoggedInException();
@@ -128,7 +133,8 @@ public class GraphQLService {
     public List<User> findByLastName(String lastName, @GraphQLEnvironment ResolutionEnvironment env)   throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             return userRepository.findByLastName(lastName);
         }
         throw new UserNotLoggedInException();
@@ -146,7 +152,8 @@ public class GraphQLService {
     public String updateUser(String firstName, String lastName, String userName, String password, Integer age, String role, @GraphQLEnvironment ResolutionEnvironment env) throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             User user = userRepository.findByUserName(userName);
             if(user==null)  return "No user with userName: "+userName;
             user.setFirstName(firstName);
@@ -165,7 +172,8 @@ public class GraphQLService {
     public String deleteUser(String id, @GraphQLEnvironment ResolutionEnvironment env)    throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             Optional<User> result = userRepository.findById(id);
             if(!result.isPresent()) {
                 return "No user with id = " + id + " present in db.";
@@ -182,7 +190,8 @@ public class GraphQLService {
     public String deleteAllUsers(@GraphQLEnvironment ResolutionEnvironment env)  throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             userRepository.deleteAll();
             return "every thing deleted User from Repository.";
         }
@@ -194,7 +203,8 @@ public class GraphQLService {
     public Product findByProductId(String productId, @GraphQLEnvironment ResolutionEnvironment env)   throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             Optional<Product> result = productRepository.findById(productId);
             if(!result.isPresent()) {
                 return null;
@@ -209,7 +219,8 @@ public class GraphQLService {
     public List<Product> findAllProducts(@GraphQLEnvironment ResolutionEnvironment env)    throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             return productRepository.findAll();
         }
         throw new UserNotLoggedInException();
@@ -220,7 +231,8 @@ public class GraphQLService {
     public List<Product> findAllProducts(String productName, @GraphQLEnvironment ResolutionEnvironment env) throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             return productRepository.findByProductName(productName);
         }
         throw new UserNotLoggedInException();
@@ -231,7 +243,8 @@ public class GraphQLService {
     public List<Product> findByProductModel(String productModel, @GraphQLEnvironment ResolutionEnvironment env)   throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             return productRepository.findByProductModel(productModel);
         }
         throw new UserNotLoggedInException();
@@ -242,7 +255,8 @@ public class GraphQLService {
     public List<Product> findByProductCost(Integer productCost, @GraphQLEnvironment ResolutionEnvironment env)   throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             return productRepository.findByProductCost(productCost);
         }
         throw new UserNotLoggedInException();
@@ -253,7 +267,8 @@ public class GraphQLService {
     public String createProduct(String productId, String productName, String productModel, Integer productCost, @GraphQLEnvironment ResolutionEnvironment env) throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             Product product = new Product(productId,productName,productModel,productCost);
             productRepository.save(product);
             return product.toString()+" saved to db.";
@@ -266,7 +281,8 @@ public class GraphQLService {
     public String updateProduct(String productId, String productName, String productModel, Integer productCost, @GraphQLEnvironment ResolutionEnvironment env) throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             Product product = new Product(productId,productName,productModel,productCost);
             productRepository.save(product);
             return product.toString() + " updated to db.";
@@ -279,7 +295,8 @@ public class GraphQLService {
     public String deleteProduct(String productId, @GraphQLEnvironment ResolutionEnvironment env)    throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             Optional<Product> result = productRepository.findById(productId);
             if(!result.isPresent())
                 return "No Product with id = " + productId + " in db.";
@@ -295,7 +312,8 @@ public class GraphQLService {
     public String deleteAllProducts(@GraphQLEnvironment ResolutionEnvironment env)  throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        if (jwtTokenUtil.isTokenValid(token)) {
             productRepository.deleteAll();
             return "every thing deleted from Product Repository.";
         }
@@ -317,35 +335,38 @@ public class GraphQLService {
 
     @GraphQLMutation(name = "loginUser")
     public User loginUser(AuthenticationData authData, @GraphQLEnvironment ResolutionEnvironment env)
-            throws UserNotFoundException, InvalidCredentialsException {
+            throws UserNotFoundException, InvalidCredentialsException, UserAlreadyLoggedInException {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
         User user = userRepository.findByUserName(authData.getUserName());
         if (user != null) {
             if (passwordEncoder.matches(authData.getPassword(), user.getPassword())) {
-//                @SuppressWarnings("unchecked")
-                HashMap<String,String> idTokenMap = user.getToken();
-                if(idTokenMap==null)    idTokenMap = new HashMap<>();
-//                List<String> messages;
-//                messages = (List<String>) request.getSession().getAttribute("MY_SESSION_MESSAGES");
-//                if(messages!=null)  logger.info("messages: " + messages.toString());
-//                if (messages == null || messages.size()==0) {
-//                    if(messages==null)
-//                        messages = new ArrayList<>();
+                if((String)request.getSession().getAttribute("MY_SESSION_TOKEN")==null) {
+                    //                @SuppressWarnings("unchecked")
+                    HashMap<String, String> idTokenMap = user.getToken();
+                    if (idTokenMap == null) idTokenMap = new HashMap<>();
+                    //                List<String> messages;
+                    //                messages = (List<String>) request.getSession().getAttribute("MY_SESSION_MESSAGES");
+                    //                if(messages!=null)  logger.info("messages: " + messages.toString());
+                    //                if (messages == null || messages.size()==0) {
+                    //                    if(messages==null)
+                    //                        messages = new ArrayList<>();
                     //request.getSession().setAttribute("MY_SESSION_MESSAGES", messages);
-                    String token = jwtTokenUtil.generateToken(user.getUserName(),request);
-                    idTokenMap.put(request.getSession().getId(),token);
-//                    request.getSession().setAttribute("MY_SESSION_MESSAGES", messages);
+                    String token = jwtTokenUtil.generateToken(user.getUserName(), request);
+                    idTokenMap.put(request.getSession().getId(), token);
+                    //                    request.getSession().setAttribute("MY_SESSION_MESSAGES", messages);
                     request.getSession().setAttribute("MY_SESSION_TOKEN", token);
-                    request.getSession().setAttribute("MY_SESSION_USERNAME",user.getUserName());
+                    request.getSession().setAttribute("MY_SESSION_USERNAME", user.getUserName());
                     logger.info("User logged in with userName..." + authData.getUserName() + " and token " + token);
                     user.setToken(idTokenMap);
                     userRepository.save(user);
-//                    loggedInUserBean.setLoggedInUser(user);
+                    //                    loggedInUserBean.setLoggedInUser(user);
                     return user;
-//                } else {
-//                    return user;
-//                }
+                }
+                else    {
+                    logger.info("User already LoggedIn... " + user.getUserName());
+                    throw new UserAlreadyLoggedInException();
+                }
             } else {
                 logger.info("invalid credentials to login..." + authData.getUserName());
                 throw new InvalidCredentialsException();

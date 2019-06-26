@@ -1,7 +1,7 @@
 package microservice.POC.SPQR.jwt;
 
 import microservice.POC.SPQR.GraphQLService;
-import microservice.POC.SPQR.LoggedInUserBean;
+//import microservice.POC.SPQR.LoggedInUserBean;
 import microservice.POC.SPQR.jwt.JwtTokenUtil;
 import microservice.POC.SPQR.models.User;
 import microservice.POC.SPQR.repository.UserRepository;
