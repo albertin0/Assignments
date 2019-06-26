@@ -363,6 +363,10 @@ public class GraphQLService {
                     //                    loggedInUserBean.setLoggedInUser(user);
                     return user;
                 }
+                else    if(((String)request.getSession().getAttribute("MY_SESSION_USERNAME")).equals(user.getUserName())){
+                    logger.info("User already LoggedIn... " + user.getUserName());
+                    return user;
+                }
                 else    {
                     logger.info("User already LoggedIn... " + user.getUserName());
                     throw new UserAlreadyLoggedInException();

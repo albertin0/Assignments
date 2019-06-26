@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef9293df-eb74-43c4-a1d6-3ead2077a999" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/exceptions/UserAlreadyLoggedInException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/GraphQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/GraphQLService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/LoggedInUserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/LoggedInUserBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/SpringBootMicroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/SpringBootMicroService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/target/classes/microservice/POC/SPQR/GraphQLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/target/classes/microservice/POC/SPQR/GraphQLService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/target/classes/microservice/POC/SPQR/LoggedInUserBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POC_using_SPQR/target/classes/microservice/POC/SPQR/SpringBootMicroService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../POC_using_SPQR/target/classes/microservice/POC/SPQR/SpringBootMicroService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -252,6 +244,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
