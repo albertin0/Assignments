@@ -1,0 +1,23 @@
+{
+  "rating": {
+    "primary": {
+      "value": 3,
+      "max": 12
+    },
+    "quality": {
+      "value": 3
+    },
+    "metric": {
+      "max": 41
+    }
+  },
+  "rating2": {
+    "primary": {
+      "value": 30,
+      "max": 120
+    },
+    "metric": {
+      "max": 410
+    }
+  }
+}

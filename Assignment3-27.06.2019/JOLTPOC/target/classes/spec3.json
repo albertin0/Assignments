@@ -1,0 +1,17 @@
+[
+  {
+    "operation": "cardinality",
+    "spec":  {
+      "*": {
+        "photosArray": {
+          //"0": {  //  to access by index of the list.
+          "*": {  //  it access every element of the list, use of wild character.
+            // for each item in the array
+            "url": "ONE"
+            // url should be singular
+          }
+        }
+      }
+    }
+  }
+]

@@ -9,6 +9,7 @@ import io.leangen.graphql.spqr.spring.autoconfigure.DefaultGlobalContext;
 import microservice.POC.SPQR.exceptions.*;
 import microservice.POC.SPQR.jwt.JwtTokenUtil;
 import microservice.POC.SPQR.models.AuthenticationData;
+import microservice.POC.SPQR.models.ObjectInstantiator;
 import microservice.POC.SPQR.models.Product;
 import microservice.POC.SPQR.models.User;
 import microservice.POC.SPQR.repository.ProductRepository;
@@ -77,41 +78,54 @@ public class GraphQLService {
 
     @GraphQLQuery(name = "allUsers")
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
-    public List<User> findAllUsers(@GraphQLEnvironment ResolutionEnvironment env)   throws UserNotLoggedInException, NotFoundException {
+    public List<User> findAllUsers(@GraphQLEnvironment ResolutionEnvironment env)   throws UserNotLoggedInException, NotFoundException, Exception {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
 //        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
         if (jwtTokenUtil.isTokenValid(token)) {
-            return userRepository.findAll();
+            List<User> listOfUsers = userRepository.findAll();
+            List<User> toReturnList = new ArrayList<>();
+            for(User user: listOfUsers) {
+                toReturnList.add((User) ObjectInstantiator.instantiateObject(user,roles));
+            }
+            return toReturnList;
         }
         throw new UserNotLoggedInException();
     }
 
     @GraphQLQuery(name = "allUsers")
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
-    public List<User> findAllUsers(Integer age, @GraphQLEnvironment ResolutionEnvironment env)  throws UserNotLoggedInException, NotFoundException {
+    public List<User> findAllUsers(Integer age, @GraphQLEnvironment ResolutionEnvironment env)  throws UserNotLoggedInException, NotFoundException, Exception {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
         if (jwtTokenUtil.isTokenValid(token)) {
-            return userRepository.findByAge(age);
-        }
+            List<User> listOfUsers = userRepository.findByAge(age);
+            List<User> toReturnList = new ArrayList<>();
+            for(User user: listOfUsers) {
+                toReturnList.add((User)ObjectInstantiator.instantiateObject(user,roles));
+            }
+            return toReturnList;        }
         throw new UserNotLoggedInException();
     }
 
     @GraphQLQuery(name = "user")
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
-    public User findById(String id, @GraphQLEnvironment ResolutionEnvironment env)  throws UserNotLoggedInException, NotFoundException   {
+    public User findByUserName(String userName, @GraphQLEnvironment ResolutionEnvironment env)  throws UserNotLoggedInException, NotFoundException, Exception   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
         if (jwtTokenUtil.isTokenValid(token)) {
-            Optional<User> result = userRepository.findById(id);
-            if(!result.isPresent()) {
+            User result = userRepository.findByUserName(userName);
+            if(result == null) {
                 return null;
             }
-            return result.get();
+            User toReturnResult = (User)ObjectInstantiator.instantiateObject(result,roles);
+            return toReturnResult;
         }
         throw new UserNotLoggedInException();
     }
@@ -134,6 +148,7 @@ public class GraphQLService {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+
         if (jwtTokenUtil.isTokenValid(token)) {
             return userRepository.findByLastName(lastName);
         }
@@ -200,28 +215,38 @@ public class GraphQLService {
 
     @GraphQLQuery(name = "product")
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
-    public Product findByProductId(String productId, @GraphQLEnvironment ResolutionEnvironment env)   throws UserNotLoggedInException, NotFoundException   {
+    public Product findByProductId(String productId, @GraphQLEnvironment ResolutionEnvironment env)   throws UserNotLoggedInException, NotFoundException, Exception   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
         if (jwtTokenUtil.isTokenValid(token)) {
             Optional<Product> result = productRepository.findById(productId);
             if(!result.isPresent()) {
                 return null;
             }
-            return result.get();
+            ObjectInstantiator.instantiateObject(result.get(),roles);
+            Product toReturn = (Product)ObjectInstantiator.getObject();
+            return toReturn;
         }
         throw new UserNotLoggedInException();
     }
 
     @GraphQLQuery(name = "allProducts")
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
-    public List<Product> findAllProducts(@GraphQLEnvironment ResolutionEnvironment env)    throws UserNotLoggedInException, NotFoundException   {
+    public List<Product> findAllProducts(@GraphQLEnvironment ResolutionEnvironment env)    throws UserNotLoggedInException, NotFoundException, Exception   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
+        logger.info("allProducts query reached line 242.");
         if (jwtTokenUtil.isTokenValid(token)) {
-            return productRepository.findAll();
+            List<Product> productsList = productRepository.findAll();
+            List<Product> toReturnList = new ArrayList<>();
+            for(Product product: productsList)  {
+                toReturnList.add((Product)ObjectInstantiator.instantiateObject(product,roles));
+            }
+            return toReturnList;
         }
         throw new UserNotLoggedInException();
     }
@@ -357,6 +382,7 @@ public class GraphQLService {
                     //                    request.getSession().setAttribute("MY_SESSION_MESSAGES", messages);
                     request.getSession().setAttribute("MY_SESSION_TOKEN", token);
                     request.getSession().setAttribute("MY_SESSION_USERNAME", user.getUserName());
+                    request.getSession().setAttribute("MY_USER_ROLES", user.getRole());
                     logger.info("User logged in with userName..." + authData.getUserName() + " and token " + token);
                     user.setToken(idTokenMap);
                     userRepository.save(user);
@@ -382,16 +408,16 @@ public class GraphQLService {
     }
 
     @GraphQLMutation
-    public Boolean logout(@GraphQLEnvironment ResolutionEnvironment env) {
+    public String logout(@GraphQLEnvironment ResolutionEnvironment env) {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
 //        jwtTokenUtil.invalidateToken(request.getHeader("Authorization"));
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
         String userName = (String)request.getSession().getAttribute("MY_SESSION_USERNAME");
-        logger.info("User logged out with userName..." + userName + " and token " + token);
         jwtTokenUtil.invalidateToken(token);
         request.getSession().invalidate();
+        logger.info("User logged out with userName..." + userName + " and token " + token);
 //        loggedInUserBean.setLoggedInUser(null);
-        return true;
+        return userName + " logged out successfully.";
     }
 }

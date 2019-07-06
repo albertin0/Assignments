@@ -6,7 +6,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "product")
 @ToString
-public class Product {
+public class Product extends DataObject {
+
 
     @Id
     private String productId;
@@ -28,28 +29,28 @@ public class Product {
         return productId;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
-    }
-
     public String getProductName() {
         return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
     }
 
     public String getProductModel() {
         return productModel;
     }
 
-    public void setProductModel(String productModel) {
-        this.productModel = productModel;
-    }
-
     public Integer getProductCost() {
         return productCost;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public void setProductModel(String productModel) {
+        this.productModel = productModel;
     }
 
     public void setProductCost(Integer productCost) {

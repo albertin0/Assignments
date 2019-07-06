@@ -63,12 +63,10 @@ public class JwtTokenUtil implements Serializable {
         User user = userRepository.findByUserName(subject);
         //List<String> userTokens = getUserTokensMap().get(subject);
         HashMap<String,String> userTokens = user.getToken();
-        if (userTokens != null)
-            userTokens.put(request.getSession().getId(),token);
-        else {
+        if(userTokens == null)  {
             userTokens = new HashMap<>();
-            userTokens.put(request.getSession().getId(), token);
         }
+        userTokens.put(request.getSession().getId(),token);
         //getUserTokensMap().put(subject, userTokens);
         user.setToken(userTokens);
         userRepository.save(user);
@@ -100,15 +98,17 @@ public class JwtTokenUtil implements Serializable {
     public void invalidateToken(String token) {
         String userName = getUserNameFromToken(token);
 //        List<String> userTokens = getUserTokensMap().get(userName);
-        HashMap<String,String> userTokens = userRepository.findByUserName(userName).getToken();
-        for(String k:userTokens.keySet())   {
-            if(userTokens.get(k).equals(token))
-                userTokens.remove(k);
+        HashMap<String,String> userToken = userRepository.findByUserName(userName).getToken();
+        Set<String> keys = userToken.keySet();
+        for(String k:keys)   {
+            if(userToken.get(k).equals(token)) {
+                userToken.remove(k);
+            }
         }
 //        userTokens.remove(token);
         // Remove token from DB
         User user = userRepository.findByUserName(userName);
-        user.setToken(userTokens);
+        user.setToken(userToken);
         userRepository.save(user);
     }
 

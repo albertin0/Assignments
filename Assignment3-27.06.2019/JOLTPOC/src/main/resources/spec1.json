@@ -1,0 +1,22 @@
+[
+  {
+    "operation": "remove",
+    "spec":    {
+//      "*": {
+//        "page":"",
+//        "date":"",
+//        "startTime":"",
+//        "endTime":""
+//      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "*": {
+        "uuid": "&1.uuid",
+        "*": "&1.asd"
+      }
+    }
+  }
+]

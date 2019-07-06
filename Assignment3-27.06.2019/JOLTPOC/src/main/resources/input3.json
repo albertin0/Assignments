@@ -1,0 +1,12 @@
+[{
+ "photosArray" : [
+   {
+       "url" :  [ "http://pants.com/123-normal.jpg", "http://pants.com/123-thumbnail.jpg" ],
+       "caption" : "Nice pants"
+     },
+   {
+       "url" :  [ "http://pants.com/123-thumbnail.jpg", "http://pants.com/123-normal.jpg" ],
+       "caption" : "Nice pants"
+     }
+ ]
+}]

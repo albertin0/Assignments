@@ -1,0 +1,13 @@
+{
+  "DataObject": {
+    "Product": {
+      "ADMIN":["ProductId","ProductName","ProductModel","ProductCost"],
+      "USER": ["ProductId","ProductName"]
+    },
+    "User": {
+      "ADMIN": ["Id","FirstName","LastName","Age","UserName","Password","Token","Role"],
+      "USER": ["Id","FirstName","UserName","Password","Token","Role"]
+    }
+  }
+}
+
