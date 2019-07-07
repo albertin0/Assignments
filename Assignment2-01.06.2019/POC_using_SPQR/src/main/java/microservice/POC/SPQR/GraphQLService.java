@@ -225,8 +225,7 @@ public class GraphQLService {
             if(!result.isPresent()) {
                 return null;
             }
-            ObjectInstantiator.instantiateObject(result.get(),roles);
-            Product toReturn = (Product)ObjectInstantiator.getObject();
+            Product toReturn = (Product)ObjectInstantiator.instantiateObject(result.get(),roles);;
             return toReturn;
         }
         throw new UserNotLoggedInException();
@@ -239,7 +238,6 @@ public class GraphQLService {
         HttpServletRequest request = dgc.getServletRequest();
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
         List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
-        logger.info("allProducts query reached line 242.");
         if (jwtTokenUtil.isTokenValid(token)) {
             List<Product> productsList = productRepository.findAll();
             List<Product> toReturnList = new ArrayList<>();

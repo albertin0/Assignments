@@ -2,34 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="057ca3c1-1c4f-48dd-a388-f52c4e90adcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/DataObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/ObjectInstantiator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/src/main/java/Child1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/src/main/java/CustomJsonTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/src/main/java/Parent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/src/main/java/Runner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/src/main/resources/input1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/src/main/resources/input2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/src/main/resources/input3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/src/main/resources/input4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/src/main/resources/spec1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/src/main/resources/spec2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/src/main/resources/spec3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/src/main/resources/spec4.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/DataObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/ObjectInstantiator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/ObjectInstantiator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/GraphQLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/GraphQLService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/jwt/JwtTokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/jwt/JwtTokenUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/models/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/models/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/src/main/java/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/src/main/java/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/target/classes/Child1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/target/classes/Child1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/target/classes/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment3-27.06.2019/JOLTPOC/target/classes/Runner.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="246" column="71" selection-start-line="246" selection-start-column="71" selection-end-line="246" selection-end-column="71" />
+            <state relative-caret-position="2551">
+              <caret line="227" column="74" selection-start-line="227" selection-start-column="74" selection-end-line="227" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,39 +69,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/ObjectInstantiator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="-237">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#595#596#0" expanded="true" />
                 <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#667#668#0" expanded="true" />
-                <element signature="e#696#697#0" expanded="true" />
-                <element signature="e#3039#3040#0" expanded="true" />
-                <element signature="e#3151#3152#0" expanded="true" />
-                <element signature="e#3261#3262#0" expanded="true" />
-                <element signature="e#3368#3369#0" expanded="true" />
-                <element signature="e#3475#3476#0" expanded="true" />
-                <element signature="e#3563#3564#0" expanded="true" />
-                <element signature="e#3675#3676#0" expanded="true" />
-                <element signature="e#3772#3773#0" expanded="true" />
-                <element signature="e#3681#3682#0" expanded="true" />
-                <element signature="e#3735#3736#0" expanded="true" />
-                <element signature="e#3789#3790#0" expanded="true" />
-                <element signature="e#3818#3819#0" expanded="true" />
+                <element signature="e#655#656#0" expanded="true" />
+                <element signature="e#684#685#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/DataObject.java">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Class.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-777">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="128">
+              <caret line="392" column="13" selection-start-line="392" selection-start-column="13" selection-end-line="392" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -127,20 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="57" column="5" selection-start-line="43" selection-start-column="4" selection-end-line="57" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtUserDetailsService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="-335">
+              <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -163,11 +118,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
+            <state relative-caret-position="-1267">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/Role.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -259,14 +223,14 @@
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/exceptions/UserAlreadyLoggedInException.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtTokenUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/DataObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/Product.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spec.json" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/UserObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/ObjectInstantiator.java" />
       </list>
     </option>
@@ -549,25 +513,25 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>367</line>
+          <line>366</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>379</line>
+          <line>378</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>380</line>
+          <line>379</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>376</line>
+          <line>375</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
@@ -725,13 +689,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>363</line>
+          <line>362</line>
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>365</line>
+          <line>364</line>
           <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
@@ -767,13 +731,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>386</line>
+          <line>385</line>
           <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>388</line>
+          <line>387</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
@@ -809,7 +773,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>389</line>
+          <line>388</line>
           <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
@@ -857,7 +821,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java</url>
-          <line>370</line>
+          <line>369</line>
           <properties />
           <option name="timeStamp" value="64" />
         </line-breakpoint>
@@ -1172,13 +1136,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/ProductRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1283,33 +1240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="2124" column="18" selection-start-line="2124" selection-start-column="18" selection-end-line="2124" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="57" column="5" selection-start-line="43" selection-start-column="4" selection-end-line="57" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spec.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1317,9 +1247,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2551">
+          <caret line="227" column="74" selection-start-line="227" selection-start-column="74" selection-end-line="227" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/DataObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-777">
+        <state relative-caret-position="85">
           <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1327,10 +1267,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="246" column="71" selection-start-line="246" selection-start-column="71" selection-end-line="246" selection-end-column="71" />
+        <state relative-caret-position="128">
+          <caret line="392" column="13" selection-start-line="392" selection-start-column="13" selection-end-line="392" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-335">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1267">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1339,26 +1303,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/ObjectInstantiator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="-237">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#595#596#0" expanded="true" />
             <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-            <element signature="e#3039#3040#0" expanded="true" />
-            <element signature="e#3151#3152#0" expanded="true" />
-            <element signature="e#3261#3262#0" expanded="true" />
-            <element signature="e#3368#3369#0" expanded="true" />
-            <element signature="e#3475#3476#0" expanded="true" />
-            <element signature="e#3563#3564#0" expanded="true" />
-            <element signature="e#3675#3676#0" expanded="true" />
-            <element signature="e#3772#3773#0" expanded="true" />
-            <element signature="e#3681#3682#0" expanded="true" />
-            <element signature="e#3735#3736#0" expanded="true" />
-            <element signature="e#3789#3790#0" expanded="true" />
-            <element signature="e#3818#3819#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
           </folding>
         </state>
       </provider>

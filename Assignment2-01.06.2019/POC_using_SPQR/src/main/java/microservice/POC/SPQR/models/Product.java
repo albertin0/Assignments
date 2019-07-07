@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "product")
 @ToString
-public class Product extends DataObject {
+public class Product {
 
 
     @Id

@@ -10,7 +10,7 @@ import java.util.List;
 
 @Document(collection = "user")
 @ToString
-public class User extends DataObject {
+public class User {
 
     @Id
     private String id;
