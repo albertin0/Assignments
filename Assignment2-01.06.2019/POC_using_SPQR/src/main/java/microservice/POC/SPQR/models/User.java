@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @Document(collection = "user")
+//@org.springframework.data.elasticsearch.annotations.Document(indexName = "users", type = "users", shards = 1)
 @ToString
 public class User {
 

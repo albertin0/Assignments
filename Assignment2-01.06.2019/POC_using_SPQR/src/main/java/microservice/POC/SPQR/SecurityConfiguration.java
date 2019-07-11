@@ -21,6 +21,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled=true)
 @EnableMongoRepositories(basePackageClasses= UserRepository.class)
+//@EnableElasticsearchRepositories(basePackageClasses = UserElasticRepository.class)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 
@@ -39,6 +40,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+//    @Bean
+//    public ElasticsearchTemplate elasticsearchTemplate()    {
+//        return new ElasticsearchTemplate(null);
+//    }
 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
