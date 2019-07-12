@@ -1,8 +1,6 @@
 package microservice.POC.SPQR.jwt;
 
-import microservice.POC.SPQR.GraphQLService;
 //import microservice.POC.SPQR.LoggedInUserBean;
-import microservice.POC.SPQR.jwt.JwtTokenUtil;
 import microservice.POC.SPQR.models.User;
 import microservice.POC.SPQR.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +18,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class JwtFilter extends OncePerRequestFilter {
@@ -32,9 +29,6 @@ public class JwtFilter extends OncePerRequestFilter {
     private JwtTokenUtil jwtTokenUtil;
 
     private String authToken = null;
-
-//    @Autowired
-//    LoggedInUserBean loggedInUserBean;
 
     @Autowired
     UserRepository userRepository;
@@ -51,12 +45,6 @@ public class JwtFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
-//        Optional<HttpServletRequest> optReq = Optional.of(request);
-//        authToken = optReq.map(req -> req.getHeader("Authorization")).filter(token -> !token.isEmpty()).orElse(null);
-//        if(loggedInUserBean!=null && loggedInUserBean.getLoggedInUser()!=null && loggedInUserBean.getLoggedInUser().getToken()!=null
-//        && loggedInUserBean.getLoggedInUser().getToken().size()>0)  {
-//            authToken = loggedInUserBean.getLoggedInUser().getToken().get(0);
-//        }
         List<User> users = null;
         if(userRepository!=null) {
             users = userRepository.findAll();

@@ -2,16 +2,15 @@ package microservice.POC.SPQR.models;
 
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-//@org.springframework.data.elasticsearch.annotations.Document(indexName = "my-index3")//, type = "user"
-@Document(collection = "user")
+@Document(indexName = "my_index", type = "user")
 @ToString
-public class User {
+public class UserElastic {
 
     @Id
     private String id;
@@ -23,21 +22,21 @@ public class User {
     private HashMap<String,String> token;
     private List<String> role;
 
-    public User() {
+    public UserElastic() {
     }
 
-    public User(User user)  {
-        this.id = user.getId();
-        this.firstName = user.getFirstName();
-        this.lastName = user.getLastName();
-        this.userName = user.getUserName();
-        this.password = user.getPassword();
-        this.age = user.getAge();
-        this.token = user.getToken();
-        this.role = user.getRole();
+    public UserElastic(UserElastic userElastic)  {
+        this.id = userElastic.getId();
+        this.firstName = userElastic.getFirstName();
+        this.lastName = userElastic.getLastName();
+        this.userName = userElastic.getUserName();
+        this.password = userElastic.getPassword();
+        this.age = userElastic.getAge();
+        this.token = userElastic.getToken();
+        this.role = userElastic.getRole();
     }
 
-    public User(String firstName, String lastName, String userName, String password, Integer age, String r) {
+    public UserElastic(String firstName, String lastName, String userName, String password, Integer age, String r) {
         //this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -47,7 +46,7 @@ public class User {
         this.addRole(r);
     }
 
-    public User(String id, String firstName, String lastName, String userName, String password, Integer age, HashMap<String,String> token, List<String> role) {
+    public UserElastic(String id, String firstName, String lastName, String userName, String password, Integer age, HashMap<String,String> token, List<String> role) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

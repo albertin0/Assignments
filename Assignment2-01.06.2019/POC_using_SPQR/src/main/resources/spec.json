@@ -7,6 +7,10 @@
     "User": {
       "ADMIN": ["Id","FirstName","LastName","Age","UserName","Password","Token","Role"],
       "USER": ["Id","FirstName","UserName","Password","Token","Role"]
+    },
+    "UserElastic": {
+      "ADMIN": ["Id","FirstName","LastName","Age","UserName","Password","Token","Role"],
+      "USER": ["Id","FirstName","UserName","Password","Token","Role"]
     }
   }
 }

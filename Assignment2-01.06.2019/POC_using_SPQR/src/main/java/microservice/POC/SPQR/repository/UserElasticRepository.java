@@ -1,13 +1,15 @@
 //package microservice.POC.SPQR.repository;
 //
-//import microservice.POC.SPQR.models.User;
+//import microservice.POC.SPQR.models.UserElastic;
 //import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
+//import org.springframework.stereotype.Repository;
 //
 //import java.util.List;
 //
-//public interface UserElasticRepository extends ElasticsearchRepository<User, String> {
-//    public List<User> findByFirstName(String firstName);
-//    public List<User> findByLastName(String lastName);
-//    public List<User> findByAge(Integer age);
-//    public User findByUserName(String userName);
+//@Repository
+//public interface UserElasticRepository extends ElasticsearchRepository<UserElastic, String> {
+//    public List<UserElastic> findByFirstName(String firstName);
+//    public List<UserElastic> findByLastName(String lastName);
+//    public List<UserElastic> findByAge(Integer age);
+//    public UserElastic findByUserName(String userName);
 //}

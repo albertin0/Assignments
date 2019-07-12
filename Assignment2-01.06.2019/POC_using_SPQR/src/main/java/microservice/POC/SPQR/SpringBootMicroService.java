@@ -16,8 +16,4 @@ public class SpringBootMicroService {
         return new BCryptPasswordEncoder();
     }
 
-//    @Bean
-//    public LoggedInUserBean loggedInUserBean()    {
-//        return new LoggedInUserBean();
-//    }
 }

@@ -7,12 +7,13 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.impl.DefaultClock;
 import microservice.POC.SPQR.exceptions.NotFoundException;
 import microservice.POC.SPQR.models.User;
+//import microservice.POC.SPQR.models.UserElastic;
+//import microservice.POC.SPQR.repository.UserElasticRepository;
 import microservice.POC.SPQR.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
@@ -36,6 +37,9 @@ public class JwtTokenUtil implements Serializable {
 
     @Autowired
     UserRepository userRepository;
+
+//    @Autowired
+//    UserElasticRepository userElasticRepository;
 
     public String getUserNameFromToken(String token) {
         return getClaimFromToken(token, Claims::getSubject);
@@ -61,6 +65,8 @@ public class JwtTokenUtil implements Serializable {
                 .signWith(SignatureAlgorithm.HS512, secret).compact();
         // Add token to DB
         User user = userRepository.findByUserName(subject);
+
+//        UserElastic userElastic = userElasticRepository.findByUserName(subject);
         //List<String> userTokens = getUserTokensMap().get(subject);
         HashMap<String,String> userTokens = user.getToken();
         if(userTokens == null)  {
@@ -70,6 +76,9 @@ public class JwtTokenUtil implements Serializable {
         //getUserTokensMap().put(subject, userTokens);
         user.setToken(userTokens);
         userRepository.save(user);
+
+//        userElastic.setToken(userTokens);
+//        userElasticRepository.save(userElastic);
         return token;
     }
 
@@ -110,6 +119,9 @@ public class JwtTokenUtil implements Serializable {
         User user = userRepository.findByUserName(userName);
         user.setToken(userToken);
         userRepository.save(user);
-    }
 
+//        UserElastic userElastic = userElasticRepository.findByUserName(userName);
+//        userElastic.setToken(userToken);
+//        userElasticRepository.save(userElastic);
+    }
 }

@@ -8,7 +8,6 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends MongoRepository<User, String> {
-    //public microservice.POC.SPQR.models.User findById(String id);
     public List<User> findByFirstName(String firstName);
     public List<User> findByLastName(String lastName);
     public List<User> findByAge(Integer age);
