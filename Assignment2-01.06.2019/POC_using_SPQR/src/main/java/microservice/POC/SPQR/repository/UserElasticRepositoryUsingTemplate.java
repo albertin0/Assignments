@@ -10,14 +10,19 @@ import java.util.List;
 public interface UserElasticRepositoryUsingTemplate {
     public List<UserElastic> findAll();
     public List<UserElastic> findByFirstName(String firstName);
+    public List<UserElastic> findByFirstNameRegEx(String firstName);
     public List<UserElastic> findByLastName(String lastName);
+    public List<UserElastic> findByLastNameRegEx(String lastName);
     public List<UserElastic> findByAge(Integer age);
+    public List<UserElastic> findByAgeRange(Integer from, Integer to);
     public UserElastic findByUserName(String userName);
+    public UserElastic findByUserId(String id);
 
     public UserElastic createUser(UserElastic userElastic);
     public UserElastic updateUser(UserElastic userElastic);
 
     public void deleteUser(UserElastic userElastic);
+    public void deleteAll();
 
     public CourseElastic createCourse(CourseElastic courseElastic);
 

@@ -2,6 +2,8 @@ package microservice.POC.SPQR.jwt;
 
 //import microservice.POC.SPQR.LoggedInUserBean;
 import microservice.POC.SPQR.models.User;
+import microservice.POC.SPQR.models.UserElastic;
+import microservice.POC.SPQR.repository.UserElasticRepositoryUsingTemplate;
 import microservice.POC.SPQR.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -33,6 +35,9 @@ public class JwtFilter extends OncePerRequestFilter {
     @Autowired
     UserRepository userRepository;
 
+    @Autowired
+    UserElasticRepositoryUsingTemplate userElasticRepositoryUsingTemplate;
+
     public JwtFilter() {
 
     }
@@ -45,14 +50,14 @@ public class JwtFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
-        List<User> users = null;
-        if(userRepository!=null) {
-            users = userRepository.findAll();
+        List<UserElastic> userElastics = null;
+        if(userElasticRepositoryUsingTemplate!=null) {
+            userElastics = userElasticRepositoryUsingTemplate.findAll();
         }
-        if(users!=null) {
-            for (User user : users) {
-                if (user.getToken() != null && user.getToken().keySet().contains(request.getSession().getId())) {
-                    authToken = user.getToken().get(request.getSession().getId());
+        if(userElastics!=null) {
+            for (UserElastic userElastic : userElastics) {
+                if (userElastic.getToken() != null && userElastic.getToken().keySet().contains(request.getSession().getId())) {
+                    authToken = userElastic.getToken().get(request.getSession().getId());
                 }
             }
         }

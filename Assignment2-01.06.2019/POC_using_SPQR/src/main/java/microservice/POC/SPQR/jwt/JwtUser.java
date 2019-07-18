@@ -1,6 +1,7 @@
 package microservice.POC.SPQR.jwt;
 
 import microservice.POC.SPQR.models.User;
+import microservice.POC.SPQR.models.UserElastic;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -8,12 +9,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-public class JwtUser extends User implements UserDetails {
+public class JwtUser extends UserElastic implements UserDetails {
 
     private static final long serialVersionUID = 1L;
 
-    public JwtUser(User user) {
-        super(user);
+    public JwtUser(UserElastic userElastic) {
+        super(userElastic);
     }
 
     @Override

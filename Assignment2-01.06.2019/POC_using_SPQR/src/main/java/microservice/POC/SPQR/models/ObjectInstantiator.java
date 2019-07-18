@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.FileReader;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -57,4 +58,24 @@ public final class ObjectInstantiator {
         return object;
     }
 
+    public static String generateHashCode(String... input)  {
+        int hash = 7;
+        for(String in: input)   {
+            for(int i=0; i<in.length(); i++)  {
+                hash = hash*31 + in.charAt(i);
+            }
+        }
+        return String.valueOf(hash);
+    }
+
+    public static List<UserElastic> allotePageList(List<UserElastic> list, Integer index)   {
+        List<UserElastic> pageList = new ArrayList<>();
+        int pageSize = 10;
+        int i = pageSize*index, j = 0;
+        while(i<list.size() && j<pageSize)    {
+            pageList.add(list.get(i++));
+            j++;
+        }
+        return pageList;
+    }
 }

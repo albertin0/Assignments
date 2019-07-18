@@ -10,7 +10,6 @@ import microservice.POC.SPQR.exceptions.*;
 import microservice.POC.SPQR.jwt.JwtTokenUtil;
 import microservice.POC.SPQR.models.*;
 import microservice.POC.SPQR.repository.ProductRepository;
-//import microservice.POC.SPQR.repository.UserElasticRepository;
 import microservice.POC.SPQR.repository.UserElasticRepositoryUsingTemplate;
 import microservice.POC.SPQR.repository.UserRepository;
 import org.slf4j.Logger;
@@ -56,18 +55,6 @@ public class GraphQLService {
     public String getGreeting(String name, @GraphQLEnvironment ResolutionEnvironment env) throws UserNotLoggedInException, NotFoundException {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-//        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
-//            return "Hello " + name + "!";
-//        }
-//        throw new UserNotLoggedInException();
-//        if(loggedInUserBean.getLoggedInUser()!=null && loggedInUserBean.getLoggedInUser().getToken()!=null
-//        && loggedInUserBean.getLoggedInUser().getToken().size()>0) {
-//            String token = loggedInUserBean.getLoggedInUser().getToken().get(0);
-//            if (jwtTokenUtil.isTokenValid(token)) {
-//                return "Hello " + name + "!";
-//            }
-//        }
-//        throw new UserNotLoggedInException();
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
         if(jwtTokenUtil.isTokenValid(token))    {
             return "Hello " + name + "!";
@@ -77,21 +64,13 @@ public class GraphQLService {
 
     @GraphQLQuery(name = "allUsers")
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
-    public List<UserElastic> findAllUsers(@GraphQLEnvironment ResolutionEnvironment env)   throws UserNotLoggedInException, NotFoundException, Exception {
+    public ReturnObject findAllUsers(@GraphQLEnvironment ResolutionEnvironment env, Integer pageIndex)   throws UserNotLoggedInException, NotFoundException, Exception {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
         List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
-//        if (jwtTokenUtil.isTokenValid(request.getHeader("Authorization"))) {
         if (jwtTokenUtil.isTokenValid(token)) {
             List<UserElastic> toReturnList = new ArrayList<>();
-//            userRepository.findAll().forEach(userElastic -> {
-//                try {
-//                    toReturnList.add((User) ObjectInstantiator.instantiateObject(userElastic,roles));
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            });
             userElasticRepositoryUsingTemplate.findAll().forEach(userElastic -> {
                 try {
                     toReturnList.add((UserElastic)ObjectInstantiator.instantiateObject(userElastic,roles));
@@ -99,14 +78,15 @@ public class GraphQLService {
                     e.printStackTrace();
                 }
             });
-            return toReturnList;
+            List<UserElastic> pageList = ObjectInstantiator.allotePageList(toReturnList, pageIndex);
+            return new ReturnObject(toReturnList.size(), pageList, pageIndex);
         }
         throw new UserNotLoggedInException();
     }
 
     @GraphQLQuery(name = "allUsers")
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
-    public List<UserElastic> findAllUsers(Integer age, @GraphQLEnvironment ResolutionEnvironment env)  throws UserNotLoggedInException, NotFoundException, Exception {
+    public ReturnObject findAllUsers(Integer age, @GraphQLEnvironment ResolutionEnvironment env, Integer pageIndex)  throws UserNotLoggedInException, NotFoundException, Exception {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
@@ -120,7 +100,30 @@ public class GraphQLService {
                     e.printStackTrace();
                 }
             });
-            return toReturnList;
+            List<UserElastic> pageList = ObjectInstantiator.allotePageList(toReturnList, pageIndex);
+            return new ReturnObject(toReturnList.size(), pageList, pageIndex);
+        }
+        throw new UserNotLoggedInException();
+    }
+
+    @GraphQLQuery(name = "allUsers")
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+    public ReturnObject findAllUsersInAgeRange(Integer fromAge,Integer toAge, @GraphQLEnvironment ResolutionEnvironment env, Integer pageIndex)  throws UserNotLoggedInException, NotFoundException, Exception {
+        DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
+        HttpServletRequest request = dgc.getServletRequest();
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
+        if (jwtTokenUtil.isTokenValid(token)) {
+            List<UserElastic> toReturnList = new ArrayList<>();
+            userElasticRepositoryUsingTemplate.findByAgeRange(fromAge, toAge).forEach(userElastic -> {
+                try {
+                    toReturnList.add((UserElastic)ObjectInstantiator.instantiateObject(userElastic,roles));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
+            List<UserElastic> pageList = ObjectInstantiator.allotePageList(toReturnList, pageIndex);
+            return new ReturnObject(toReturnList.size(), pageList, pageIndex);
         }
         throw new UserNotLoggedInException();
     }
@@ -145,35 +148,91 @@ public class GraphQLService {
 
     @GraphQLQuery(name = "allUsers")
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
-    public List<UserElastic> findByFirstName(String firstName, @GraphQLEnvironment ResolutionEnvironment env)   throws UserNotLoggedInException, NotFoundException   {
+    public ReturnObject findByFirstName(String firstName, @GraphQLEnvironment ResolutionEnvironment env, Integer pageIndex)   throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
         if (jwtTokenUtil.isTokenValid(token)) {
-            return userElasticRepositoryUsingTemplate.findByFirstName(firstName);
+            List<UserElastic> toReturnList = new ArrayList<>();
+            userElasticRepositoryUsingTemplate.findByFirstName(firstName).forEach(userElastic -> {
+                try {
+                    toReturnList.add((UserElastic)ObjectInstantiator.instantiateObject(userElastic,roles));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
+            List<UserElastic> pageList = ObjectInstantiator.allotePageList(toReturnList, pageIndex);
+            return new ReturnObject(toReturnList.size(), pageList, pageIndex);
+        }
+        throw new UserNotLoggedInException();
+    }
+
+    @GraphQLQuery(name = "allUsersRegEx")
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+    public ReturnObject findByFirstNameRegEx(String firstName, @GraphQLEnvironment ResolutionEnvironment env, Integer pageIndex)   throws UserNotLoggedInException, NotFoundException   {
+        DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
+        HttpServletRequest request = dgc.getServletRequest();
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
+        if (jwtTokenUtil.isTokenValid(token)) {
+            List<UserElastic> toReturnList = new ArrayList<>();
+            userElasticRepositoryUsingTemplate.findByFirstNameRegEx(".*"+firstName+".*").forEach(userElastic -> {
+                try {
+                    toReturnList.add((UserElastic)ObjectInstantiator.instantiateObject(userElastic,roles));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
+            List<UserElastic> pageList = ObjectInstantiator.allotePageList(toReturnList, pageIndex);
+            return new ReturnObject(toReturnList.size(), pageList, pageIndex);
         }
         throw new UserNotLoggedInException();
     }
 
     @GraphQLQuery(name = "allUsers")
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
-    public List<UserElastic> findByLastName(String lastName, @GraphQLEnvironment ResolutionEnvironment env)   throws UserNotLoggedInException, NotFoundException   {
+    public ReturnObject findByLastName(String lastName, @GraphQLEnvironment ResolutionEnvironment env, Integer pageIndex)   throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
-
+        List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
         if (jwtTokenUtil.isTokenValid(token)) {
-            return userElasticRepositoryUsingTemplate.findByLastName(lastName);
+            List<UserElastic> toReturnList = new ArrayList<>();
+            userElasticRepositoryUsingTemplate.findByLastName(lastName).forEach(userElastic -> {
+                try {
+                    toReturnList.add((UserElastic)ObjectInstantiator.instantiateObject(userElastic,roles));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
+            List<UserElastic> pageList = ObjectInstantiator.allotePageList(toReturnList, pageIndex);
+            return new ReturnObject(toReturnList.size(), pageList, pageIndex);
         }
         throw new UserNotLoggedInException();
     }
 
-//    @GraphQLMutation(name = "createUser")
-//    public String createUser(String firstName, String lastName, String userName, String password, Integer age, String role) {
-//        User user = new User(firstName,lastName,userName,password,age,role);
-//        userRepository.save(user);
-//        return user.toString()+" saved to db.";
-//    }
+    @GraphQLQuery(name = "allUsersRegEx")
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+    public ReturnObject findByLastNameRegEx(String lastName, @GraphQLEnvironment ResolutionEnvironment env, Integer pageIndex)   throws UserNotLoggedInException, NotFoundException   {
+        DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
+        HttpServletRequest request = dgc.getServletRequest();
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
+        if (jwtTokenUtil.isTokenValid(token)) {
+            List<UserElastic> toReturnList = new ArrayList<>();
+            userElasticRepositoryUsingTemplate.findByLastNameRegEx("^[a-zA-Z0-9_ ]*"+lastName+"[a-zA-Z0-9_ ]*$").forEach(userElastic -> {
+                try {
+                    toReturnList.add((UserElastic)ObjectInstantiator.instantiateObject(userElastic,roles));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
+            List<UserElastic> pageList = ObjectInstantiator.allotePageList(toReturnList, pageIndex);
+            return new ReturnObject(toReturnList.size(), pageList, pageIndex);
+        }
+        throw new UserNotLoggedInException();
+    }
 
     @GraphQLMutation(name = "updateUser")
     @PreAuthorize("hasRole('ADMIN')")
@@ -183,21 +242,25 @@ public class GraphQLService {
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
         if (jwtTokenUtil.isTokenValid(token)) {
             User user = userRepository.findByUserName(userName);
-//            UserElastic userElastic = userElasticRepository.findByUserName(userName);
+
+            UserElastic userElastic = userElasticRepositoryUsingTemplate.findByUserName(userName);
+            userElasticRepositoryUsingTemplate.deleteUser(userElastic);
+
             if(user==null)  return "No user with userName: "+userName;
-            user.setFirstName(firstName);
-            user.setLastName(lastName);
-            user.setPassword(password);
-            user.setAge(age);
-            user.addRole(role);
+
+            if(firstName!=null)    user.setFirstName(firstName);
+            if(lastName!=null)    user.setLastName(lastName);
+            if(password!=null)    user.setPassword(password);
+            if(age!=null)   user.setAge(age);
+            if(role!=null)    user.addRole(role);
             userRepository.save(user);
 
-//            userElastic.setFirstName(firstName);
-//            userElastic.setLastName(lastName);
-//            userElastic.setPassword(password);
-//            userElastic.setAge(age);
-//            userElastic.addRole(role);
-//            userElasticRepository.save(userElastic);
+            if(firstName!=null)    userElastic.setFirstName(firstName);
+            if(lastName!=null)    userElastic.setLastName(lastName);
+            if(password!=null)    userElastic.setPassword(password);
+            if(age!=null)    userElastic.setAge(age);
+            if(role!=null)    userElastic.addRole(role);
+            userElasticRepositoryUsingTemplate.createUser(userElastic);
             return user.toString() + " updated to both dbs(mongo and elastic).";
         }
         throw new UserNotLoggedInException();
@@ -211,15 +274,14 @@ public class GraphQLService {
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
         if (jwtTokenUtil.isTokenValid(token)) {
             Optional<User> result = userRepository.findById(id);
-//            Optional<UserElastic> resultElastic = userElasticRepository.findById(id);
+            UserElastic resultElastic = userElasticRepositoryUsingTemplate.findByUserId(id);
             if(!result.isPresent()) {
                 return "No user with id = " + id + " present in db.";
             }
             User user = result.get();
             userRepository.delete(user);
 
-//            UserElastic userElastic = resultElastic.get();
-//            userElasticRepository.delete(userElastic);
+            userElasticRepositoryUsingTemplate.deleteUser(resultElastic);
             return user.toString() + " deleted from repository.";
         }
         throw new UserNotLoggedInException();
@@ -233,7 +295,7 @@ public class GraphQLService {
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
         if (jwtTokenUtil.isTokenValid(token)) {
             userRepository.deleteAll();
-//            userElasticRepository.deleteAll();
+            userElasticRepositoryUsingTemplate.deleteAll();
             return "every thing deleted from userRepository and userElasticRepository.";
         }
         throw new UserNotLoggedInException();
@@ -388,62 +450,55 @@ public class GraphQLService {
 
     @GraphQLMutation(name = "createUser")
     public UserElastic createUser(String firstName, String lastName, String password, String userName,Integer age, String role) {
-//        if (userElasticRepositoryUsingTemplate.findByUserName(userName) != null) {
-//            logger.info("User already exist..." + userName);
-//            throw new UserAlreadyExistsException("User Already Exists");
-//        } else {
+        if (userElasticRepositoryUsingTemplate.findByUserName(userName) != null) {
+            logger.info("User already exist..." + userName);
+            throw new UserAlreadyExistsException("User Already Exists");
+        } else {
             UserElastic userElastic = new UserElastic(firstName,lastName,userName,passwordEncoder.encode(password),age,role);
-            userElastic.setId(String.valueOf(new Date().getTime()));
+            userElastic.setId(ObjectInstantiator.generateHashCode(firstName,lastName,userName));
             userElasticRepositoryUsingTemplate.createUser(userElastic);
 
-//            UserElastic userElastic = new UserElastic(firstName,lastName,userName,passwordEncoder.encode(password),age,role);
-//            userElastic.setId(String.valueOf(new Date().getTime()));
-//            userElasticRepository.save(userElastic);
+            User user = new User(firstName,lastName,userName,passwordEncoder.encode(password),age,role);
+            userRepository.save(user);
+
             logger.info("User registered..." + userName);
             return userElastic;
-//        }
+        }
     }
 
     @GraphQLMutation(name = "loginUser")
-    public User loginUser(AuthenticationData authData, @GraphQLEnvironment ResolutionEnvironment env)
+    public UserElastic loginUser(AuthenticationData authData, @GraphQLEnvironment ResolutionEnvironment env)
             throws UserNotFoundException, InvalidCredentialsException, UserAlreadyLoggedInException {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
-//        User user = userElasticRepository.findByUserName(authData.getUserName());
+        UserElastic userElastic = userElasticRepositoryUsingTemplate.findByUserName(authData.getUserName());
         User user = userRepository.findByUserName(authData.getUserName());
-        if (user != null) {
-            if (passwordEncoder.matches(authData.getPassword(), user.getPassword())) {
+        if (userElastic != null) {
+            if (passwordEncoder.matches(authData.getPassword(), userElastic.getPassword())) {
                 if((String)request.getSession().getAttribute("MY_SESSION_TOKEN")==null) {
                     //                @SuppressWarnings("unchecked")
-                    HashMap<String, String> idTokenMap = user.getToken();
+                    HashMap<String, String> idTokenMap = userElastic.getToken();
                     if (idTokenMap == null) idTokenMap = new HashMap<>();
-                    //                List<String> messages;
-                    //                messages = (List<String>) request.getSession().getAttribute("MY_SESSION_MESSAGES");
-                    //                if(messages!=null)  logger.info("messages: " + messages.toString());
-                    //                if (messages == null || messages.size()==0) {
-                    //                    if(messages==null)
-                    //                        messages = new ArrayList<>();
-                    //request.getSession().setAttribute("MY_SESSION_MESSAGES", messages);
-                    String token = jwtTokenUtil.generateToken(user.getUserName(), request);
+                    String token = jwtTokenUtil.generateToken(userElastic.getUserName(), request);
                     idTokenMap.put(request.getSession().getId(), token);
-                    //                    request.getSession().setAttribute("MY_SESSION_MESSAGES", messages);
                     request.getSession().setAttribute("MY_SESSION_TOKEN", token);
-                    request.getSession().setAttribute("MY_SESSION_USERNAME", user.getUserName());
-                    request.getSession().setAttribute("MY_USER_ROLES", user.getRole());
+                    request.getSession().setAttribute("MY_SESSION_USERNAME", userElastic.getUserName());
+                    request.getSession().setAttribute("MY_USER_ROLES", userElastic.getRole());
                     logger.info("User logged in with userName..." + authData.getUserName() + " and token " + token);
                     user.setToken(idTokenMap);
                     userRepository.save(user);
 
-//                    userElastic.setToken(idTokenMap);
-//                    userElasticRepository.save(userElastic);
-                    return user;
+                    userElasticRepositoryUsingTemplate.deleteUser(userElastic);
+                    userElastic.setToken(idTokenMap);
+                    userElasticRepositoryUsingTemplate.createUser(userElastic);
+                    return userElastic;
                 }
-                else    if(((String)request.getSession().getAttribute("MY_SESSION_USERNAME")).equals(user.getUserName())){
-                    logger.info("User already LoggedIn... " + user.getUserName());
-                    return user;
+                else    if(((String)request.getSession().getAttribute("MY_SESSION_USERNAME")).equals(userElastic.getUserName())){
+                    logger.info("User already LoggedIn... " + userElastic.getUserName());
+                    return userElastic;
                 }
                 else    {
-                    logger.info("User already LoggedIn... " + user.getUserName());
+                    logger.info("User already LoggedIn... " + (String)request.getSession().getAttribute("MY_SESSION_USERNAME"));
                     throw new UserAlreadyLoggedInException();
                 }
             } else {

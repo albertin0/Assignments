@@ -9,6 +9,8 @@ import microservice.POC.SPQR.exceptions.NotFoundException;
 import microservice.POC.SPQR.models.User;
 //import microservice.POC.SPQR.models.UserElastic;
 //import microservice.POC.SPQR.repository.UserElasticRepository;
+import microservice.POC.SPQR.models.UserElastic;
+import microservice.POC.SPQR.repository.UserElasticRepositoryUsingTemplate;
 import microservice.POC.SPQR.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,8 +40,8 @@ public class JwtTokenUtil implements Serializable {
     @Autowired
     UserRepository userRepository;
 
-//    @Autowired
-//    UserElasticRepository userElasticRepository;
+    @Autowired
+    UserElasticRepositoryUsingTemplate userElasticRepositoryUsingTemplate;
 
     public String getUserNameFromToken(String token) {
         return getClaimFromToken(token, Claims::getSubject);
@@ -66,30 +68,25 @@ public class JwtTokenUtil implements Serializable {
         // Add token to DB
         User user = userRepository.findByUserName(subject);
 
+        UserElastic userElastic = userElasticRepositoryUsingTemplate.findByUserName(subject);
+
 //        UserElastic userElastic = userElasticRepository.findByUserName(subject);
         //List<String> userTokens = getUserTokensMap().get(subject);
-        HashMap<String,String> userTokens = user.getToken();
+        HashMap<String,String> userTokens = userElastic.getToken();
         if(userTokens == null)  {
             userTokens = new HashMap<>();
         }
         userTokens.put(request.getSession().getId(),token);
-        //getUserTokensMap().put(subject, userTokens);
+
         user.setToken(userTokens);
         userRepository.save(user);
 
-//        userElastic.setToken(userTokens);
-//        userElasticRepository.save(userElastic);
+        userElasticRepositoryUsingTemplate.deleteUser(userElastic);
+        userElastic.setToken(userTokens);
+        userElasticRepositoryUsingTemplate.createUser(userElastic);
+
         return token;
     }
-
-//    public Map<String, List<String>> getUserTokensMap() {
-//        if (userTokensMap.isEmpty()) {
-//            userRepository.findAll().forEach((user) -> {
-//                userTokensMap.put(user.getUserName(), user.getToken());
-//            });
-//        }
-//        return userTokensMap;
-//    }
 
     public Boolean isTokenValid(String token) throws NotFoundException {
         if (token.isEmpty()) {
@@ -97,31 +94,32 @@ public class JwtTokenUtil implements Serializable {
             throw new NotFoundException();
         }
         final String userName = getUserNameFromToken(token);
-        User user = userRepository.findByUserName(userName);
-        if (user != null)
-//            return (userName.equals(user.getUserName()) && getUserTokensMap().get(userName).contains(token));
-            return (userName.equals(user.getUserName()) && user.getToken().values().contains(token));
+        UserElastic userElastic = userElasticRepositoryUsingTemplate.findByUserName(userName);
+        if (userElastic != null)
+            return (userName.equals(userElastic.getUserName()) && userElastic.getToken().values().contains(token));
         return false;
     }
 
     public void invalidateToken(String token) {
         String userName = getUserNameFromToken(token);
 //        List<String> userTokens = getUserTokensMap().get(userName);
-        HashMap<String,String> userToken = userRepository.findByUserName(userName).getToken();
-        Set<String> keys = userToken.keySet();
-        for(String k:keys)   {
+        HashMap<String,String> userToken = userElasticRepositoryUsingTemplate.findByUserName(userName).getToken();
+        for(String k:userToken.keySet())   {
             if(userToken.get(k).equals(token)) {
                 userToken.remove(k);
             }
         }
 //        userTokens.remove(token);
         // Remove token from DB
+        UserElastic userElastic = userElasticRepositoryUsingTemplate.findByUserName(userName);
         User user = userRepository.findByUserName(userName);
+
         user.setToken(userToken);
         userRepository.save(user);
 
-//        UserElastic userElastic = userElasticRepository.findByUserName(userName);
-//        userElastic.setToken(userToken);
-//        userElasticRepository.save(userElastic);
+        userElasticRepositoryUsingTemplate.deleteUser(userElastic);
+        userElastic.setToken(userToken);
+        userElasticRepositoryUsingTemplate.createUser(userElastic);
+
     }
 }

@@ -46,6 +46,13 @@ public class UserElasticRepositoryUsingTemplateImp implements UserElasticReposit
     }
 
     @Override
+    public List<UserElastic> findByFirstNameRegEx(String firstName) {
+        SearchQuery searchQuery = new NativeSearchQueryBuilder()
+                .withFilter(QueryBuilders.regexpQuery("firstName", firstName)).build();
+        return esTemplate.queryForList(searchQuery, UserElastic.class);
+    }
+
+    @Override
     public List<UserElastic> findByLastName(String lastName) {
         SearchQuery searchQuery = new NativeSearchQueryBuilder()
                 .withFilter(QueryBuilders.matchQuery("lastName", lastName)).build();
@@ -53,9 +60,23 @@ public class UserElasticRepositoryUsingTemplateImp implements UserElasticReposit
     }
 
     @Override
+    public List<UserElastic> findByLastNameRegEx(String lastName) {
+        SearchQuery searchQuery = new NativeSearchQueryBuilder()
+                .withFilter(QueryBuilders.regexpQuery("lastName", lastName)).build();
+        return esTemplate.queryForList(searchQuery, UserElastic.class);
+    }
+
+    @Override
     public List<UserElastic> findByAge(Integer age) {
         SearchQuery searchQuery = new NativeSearchQueryBuilder()
-                .withFilter(QueryBuilders.matchQuery("age", age)).build();
+                .withFilter(QueryBuilders.matchQuery("age",age)).build();
+        return esTemplate.queryForList(searchQuery, UserElastic.class);
+    }
+
+    @Override
+    public List<UserElastic> findByAgeRange(Integer from,Integer to) {
+        SearchQuery searchQuery = new NativeSearchQueryBuilder()
+                .withFilter(QueryBuilders.rangeQuery("age").from(from).to(to)).build();
         return esTemplate.queryForList(searchQuery, UserElastic.class);
     }
 
@@ -63,38 +84,55 @@ public class UserElasticRepositoryUsingTemplateImp implements UserElasticReposit
     public UserElastic findByUserName(String userName) {
         SearchQuery searchQuery = new NativeSearchQueryBuilder()
                 .withFilter(QueryBuilders.matchQuery("userName", userName)).build();
+        List<UserElastic> list = esTemplate.queryForList(searchQuery, UserElastic.class);
+        if(list.size() == 0)
+            return null;
+        return list.get(0);
+    }
+
+    @Override
+    public UserElastic findByUserId(String userId) {
+        SearchQuery searchQuery = new NativeSearchQueryBuilder()
+                .withFilter(QueryBuilders.matchQuery("id", userId)).build();
         return esTemplate.queryForList(searchQuery, UserElastic.class).get(0);
     }
 
     @Override
-    public UserElastic createUser(UserElastic user) {
+    public UserElastic createUser(UserElastic userElastic) {
         IndexQuery userQuery = new IndexQuery();
         userQuery.setIndexName(indexName);
         userQuery.setType(userTypeName);
-        userQuery.setObject(user);
+        userQuery.setId(userElastic.getId());
+        userQuery.setObject(userElastic);
 
         logger.info("UserElastic indexed: {}", esTemplate.index(userQuery));
         esTemplate.refresh(indexName);
 
-        return user;
+        return userElastic;
     }
 
     @Override
-    public UserElastic updateUser(UserElastic user) {
+    public UserElastic updateUser(UserElastic userElastic) {
         IndexQuery userQuery = new IndexQuery();
         userQuery.setIndexName(indexName);
         userQuery.setType(userTypeName);
-        userQuery.setObject(user);
+        userQuery.setId(userElastic.getId());
+        userQuery.setObject(userElastic);
 
         logger.info("UserElastic indexed: {}", esTemplate.index(userQuery));
         esTemplate.refresh(indexName);
 
-        return user;
+        return userElastic;
     }
 
     @Override
-    public void deleteUser(UserElastic user) {
-        esTemplate.getClient().prepareDelete(indexName, userTypeName, user.getId()).get();
+    public void deleteUser(UserElastic userElastic) {
+        esTemplate.getClient().prepareDelete(indexName, userTypeName, userElastic.getId()).get();
+    }
+
+    @Override
+    public void deleteAll() {
+        esTemplate.getClient().admin().indices().prepareDelete(indexName, userTypeName).get();
     }
 
     @Override
