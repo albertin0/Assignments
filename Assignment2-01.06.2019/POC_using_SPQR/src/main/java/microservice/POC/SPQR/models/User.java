@@ -39,13 +39,13 @@ public class User {
     }
 
     public User(String firstName, String lastName, String userName, String password, Integer age,String email, String r) {
-        //this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.password = password;
         this.age = age;
         this.email = email;
+        this.token = new HashMap<>();
         this.addRole(r);
     }
 

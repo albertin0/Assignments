@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="057ca3c1-1c4f-48dd-a388-f52c4e90adcf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/GraphQLService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/UserElastic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/models/UserElastic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/UserElasticRepositoryUsingTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/UserElasticRepositoryUsingTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/UserElasticRepositoryUsingTemplateImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/repository/UserElasticRepositoryUsingTemplateImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/GraphQLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/GraphQLService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/models/UserElastic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/models/UserElastic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/repository/UserElasticRepositoryUsingTemplate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/repository/UserElasticRepositoryUsingTemplate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/repository/UserElasticRepositoryUsingTemplateImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/microservice/POC/SPQR/repository/UserElasticRepositoryUsingTemplateImp.class" afterDir="false" />
-    </list>
+    <list default="true" id="057ca3c1-1c4f-48dd-a388-f52c4e90adcf" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,11 +38,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            <state relative-caret-position="359">
+              <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -162,7 +151,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/spec.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -459,9 +448,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27155825" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27155825" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -470,11 +458,11 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3584288" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
@@ -995,20 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-339">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#934#935#0" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1065#1066#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtUserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -1285,6 +1259,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="93" selection-start-line="11" selection-start-column="93" selection-end-line="11" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/microservice/POC/SPQR/jwt/JwtUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
