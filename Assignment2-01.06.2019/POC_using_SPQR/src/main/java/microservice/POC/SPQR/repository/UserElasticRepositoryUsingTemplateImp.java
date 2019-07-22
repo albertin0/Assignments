@@ -2,7 +2,11 @@ package microservice.POC.SPQR.repository;
 
 import microservice.POC.SPQR.models.CourseElastic;
 import microservice.POC.SPQR.models.UserElastic;
+import org.elasticsearch.client.transport.TransportClient;
+import org.elasticsearch.common.settings.Settings;
+import org.elasticsearch.common.transport.TransportAddress;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +17,8 @@ import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilde
 import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.stereotype.Repository;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.List;
 
 import static org.elasticsearch.index.query.QueryBuilders.matchAllQuery;
@@ -30,6 +36,7 @@ public class UserElasticRepositoryUsingTemplateImp implements UserElasticReposit
 
     @Autowired
     private ElasticsearchTemplate esTemplate;
+
 
     @Override
     public List<UserElastic> findAll() {
@@ -77,6 +84,13 @@ public class UserElasticRepositoryUsingTemplateImp implements UserElasticReposit
     public List<UserElastic> findByAgeRange(Integer from,Integer to) {
         SearchQuery searchQuery = new NativeSearchQueryBuilder()
                 .withFilter(QueryBuilders.rangeQuery("age").from(from).to(to)).build();
+        return esTemplate.queryForList(searchQuery, UserElastic.class);
+    }
+
+    @Override
+    public List<UserElastic> findByEmailRegEx(String email) {
+        SearchQuery searchQuery = new NativeSearchQueryBuilder()
+                .withFilter(QueryBuilders.regexpQuery("email", email)).build();
         return esTemplate.queryForList(searchQuery, UserElastic.class);
     }
 

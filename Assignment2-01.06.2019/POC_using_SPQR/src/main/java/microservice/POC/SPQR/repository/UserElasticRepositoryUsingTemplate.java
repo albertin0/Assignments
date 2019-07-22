@@ -15,6 +15,7 @@ public interface UserElasticRepositoryUsingTemplate {
     public List<UserElastic> findByLastNameRegEx(String lastName);
     public List<UserElastic> findByAge(Integer age);
     public List<UserElastic> findByAgeRange(Integer from, Integer to);
+    public List<UserElastic> findByEmailRegEx(String email);
     public UserElastic findByUserName(String userName);
     public UserElastic findByUserId(String id);
 

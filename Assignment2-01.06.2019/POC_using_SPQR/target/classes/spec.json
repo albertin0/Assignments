@@ -5,11 +5,11 @@
       "USER": ["ProductId","ProductName"]
     },
     "User": {
-      "ADMIN": ["Id","FirstName","LastName","Age","UserName","Password","Token","Role"],
+      "ADMIN": ["Id","FirstName","LastName","Age","UserName","Password","Token","Role","Email"],
       "USER": ["Id","FirstName","UserName","Password","Token","Role"]
     },
     "UserElastic": {
-      "ADMIN": ["Id","FirstName","LastName","Age","UserName","Password","Token","Role"],
+      "ADMIN": ["Id","FirstName","LastName","Age","UserName","Password","Token","Role","Email"],
       "USER": ["Id","FirstName","UserName","Password","Token","Role"]
     }
   }

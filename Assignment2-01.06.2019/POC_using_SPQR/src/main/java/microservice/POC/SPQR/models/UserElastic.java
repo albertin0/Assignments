@@ -19,6 +19,7 @@ public class UserElastic {
     private String userName;
     private String password;
     private Integer age;
+    private String email;
     private HashMap<String,String> token;
     private List<String> role;
 
@@ -36,13 +37,14 @@ public class UserElastic {
         this.role = userElastic.getRole();
     }
 
-    public UserElastic(String firstName, String lastName, String userName, String password, Integer age, String r) {
+    public UserElastic(String firstName, String lastName, String userName, String password, Integer age, String email, String r) {
         //this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.password = password;
         this.age = age;
+        this.email = email;
         this.addRole(r);
     }
 
@@ -91,6 +93,10 @@ public class UserElastic {
         return age;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     public HashMap<String, String> getToken() {
         return token;
     }
@@ -121,6 +127,10 @@ public class UserElastic {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setToken(HashMap<String, String> token) {

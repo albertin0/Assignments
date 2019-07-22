@@ -177,7 +177,7 @@ public class GraphQLService {
         List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
         if (jwtTokenUtil.isTokenValid(token)) {
             List<UserElastic> toReturnList = new ArrayList<>();
-            userElasticRepositoryUsingTemplate.findByFirstNameRegEx(".*"+firstName+".*").forEach(userElastic -> {
+            userElasticRepositoryUsingTemplate.findByFirstNameRegEx(".*"+firstName.toLowerCase()+".*").forEach(userElastic -> {
                 try {
                     toReturnList.add((UserElastic)ObjectInstantiator.instantiateObject(userElastic,roles));
                 } catch (Exception e) {
@@ -221,7 +221,29 @@ public class GraphQLService {
         List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
         if (jwtTokenUtil.isTokenValid(token)) {
             List<UserElastic> toReturnList = new ArrayList<>();
-            userElasticRepositoryUsingTemplate.findByLastNameRegEx("^[a-zA-Z0-9_ ]*"+lastName+"[a-zA-Z0-9_ ]*$").forEach(userElastic -> {
+            userElasticRepositoryUsingTemplate.findByLastNameRegEx(".*"+lastName.toLowerCase()+".*").forEach(userElastic -> {
+                try {
+                    toReturnList.add((UserElastic)ObjectInstantiator.instantiateObject(userElastic,roles));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
+            List<UserElastic> pageList = ObjectInstantiator.allotePageList(toReturnList, pageIndex);
+            return new ReturnObject(toReturnList.size(), pageList, pageIndex);
+        }
+        throw new UserNotLoggedInException();
+    }
+
+    @GraphQLQuery(name = "allUsersRegEx")
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+    public ReturnObject findByEmailRegEx(String email, @GraphQLEnvironment ResolutionEnvironment env, Integer pageIndex)   throws UserNotLoggedInException, NotFoundException   {
+        DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
+        HttpServletRequest request = dgc.getServletRequest();
+        String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
+        List<String> roles = (List<String>)request.getSession().getAttribute("MY_USER_ROLES");
+        if (jwtTokenUtil.isTokenValid(token)) {
+            List<UserElastic> toReturnList = new ArrayList<>();
+            userElasticRepositoryUsingTemplate.findByEmailRegEx(".*"+email.toLowerCase()+".*").forEach(userElastic -> {
                 try {
                     toReturnList.add((UserElastic)ObjectInstantiator.instantiateObject(userElastic,roles));
                 } catch (Exception e) {
@@ -236,7 +258,7 @@ public class GraphQLService {
 
     @GraphQLMutation(name = "updateUser")
     @PreAuthorize("hasRole('ADMIN')")
-    public String updateUser(String firstName, String lastName, String userName, String password, Integer age, String role, @GraphQLEnvironment ResolutionEnvironment env) throws UserNotLoggedInException, NotFoundException   {
+    public String updateUser(String firstName, String lastName, String userName, String password, Integer age, String email, String role, @GraphQLEnvironment ResolutionEnvironment env) throws UserNotLoggedInException, NotFoundException   {
         DefaultGlobalContext dgc = env.dataFetchingEnvironment.getContext();
         HttpServletRequest request = dgc.getServletRequest();
         String token = (String)request.getSession().getAttribute("MY_SESSION_TOKEN");
@@ -252,6 +274,7 @@ public class GraphQLService {
             if(lastName!=null)    user.setLastName(lastName);
             if(password!=null)    user.setPassword(password);
             if(age!=null)   user.setAge(age);
+            if(email!=null)     user.setEmail(email);
             if(role!=null)    user.addRole(role);
             userRepository.save(user);
 
@@ -259,6 +282,7 @@ public class GraphQLService {
             if(lastName!=null)    userElastic.setLastName(lastName);
             if(password!=null)    userElastic.setPassword(password);
             if(age!=null)    userElastic.setAge(age);
+            if(email!=null)     userElastic.setEmail(email);
             if(role!=null)    userElastic.addRole(role);
             userElasticRepositoryUsingTemplate.createUser(userElastic);
             return user.toString() + " updated to both dbs(mongo and elastic).";
@@ -449,16 +473,16 @@ public class GraphQLService {
     }
 
     @GraphQLMutation(name = "createUser")
-    public UserElastic createUser(String firstName, String lastName, String password, String userName,Integer age, String role) {
+    public UserElastic createUser(String firstName, String lastName, String password, String userName,Integer age, String email, String role) {
         if (userElasticRepositoryUsingTemplate.findByUserName(userName) != null) {
             logger.info("User already exist..." + userName);
             throw new UserAlreadyExistsException("User Already Exists");
         } else {
-            UserElastic userElastic = new UserElastic(firstName,lastName,userName,passwordEncoder.encode(password),age,role);
+            UserElastic userElastic = new UserElastic(firstName,lastName,userName,passwordEncoder.encode(password),age,email,role);
             userElastic.setId(ObjectInstantiator.generateHashCode(firstName,lastName,userName));
             userElasticRepositoryUsingTemplate.createUser(userElastic);
 
-            User user = new User(firstName,lastName,userName,passwordEncoder.encode(password),age,role);
+            User user = new User(firstName,lastName,userName,passwordEncoder.encode(password),age,email,role);
             userRepository.save(user);
 
             logger.info("User registered..." + userName);

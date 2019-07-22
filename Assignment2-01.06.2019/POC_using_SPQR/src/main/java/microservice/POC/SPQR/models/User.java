@@ -20,6 +20,7 @@ public class User {
     private String userName;
     private String password;
     private Integer age;
+    private String email;
     private HashMap<String,String> token;
     private List<String> role;
 
@@ -37,13 +38,14 @@ public class User {
         this.role = user.getRole();
     }
 
-    public User(String firstName, String lastName, String userName, String password, Integer age, String r) {
+    public User(String firstName, String lastName, String userName, String password, Integer age,String email, String r) {
         //this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.password = password;
         this.age = age;
+        this.email = email;
         this.addRole(r);
     }
 
@@ -54,6 +56,7 @@ public class User {
         this.userName = userName;
         this.password = password;
         this.age = age;
+        this.email = email;
         this.token = token;
         this.role = role;
     }
@@ -92,6 +95,10 @@ public class User {
         return age;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     public HashMap<String, String> getToken() {
         return token;
     }
@@ -122,6 +129,10 @@ public class User {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setToken(HashMap<String, String> token) {
