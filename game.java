@@ -14,6 +14,12 @@ class game
 		String input = sc.nextLine();
 		System.out.println(input);
 		ArrayList<Card> deck = new ArrayList<Card>();
+		setDeck(deck);
+		for(Card c:deck)
+			System.out.println(c.print());
+	}
+	
+	public static void setDeck(ArrayList<Card> deck)	{
 		int i;
 		for(i=1;i<=13;i++)	{
 			deck.add(new Card(i,"SPADES"));
@@ -21,8 +27,6 @@ class game
 			deck.add(new Card(i,"CLUB"));
 			deck.add(new Card(i,"DIAMONDS"));
 		}
-		for(Card c:deck)
-			System.out.println(c.print());
 	}
 }
 
